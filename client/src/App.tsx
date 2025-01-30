@@ -8,7 +8,7 @@ const App = () => {
   console.log(data);
 
   useEffect(() => {
-    axios.get('http://localhost:3000').then((response) => {
+    axios.get('http://localhost:3000/calendar').then((response) => {
       setData(response.data);
     }).catch((error) => {
       console.log(error)

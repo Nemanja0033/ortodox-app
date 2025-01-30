@@ -6,7 +6,7 @@ const app = express();
 
 app.use(cors());
 
-app.get('/', (req, res) => {
+app.get('/calendar', (req, res) => {
     fs.readFile('data.json', "utf8", (err, data) => {
         if(err){
             return res.status(500).json({ error: 'Problem pri citanju fajla!'});
