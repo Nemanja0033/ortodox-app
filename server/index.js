@@ -7,8 +7,12 @@ const app = express();
 app.use(cors());
 
 app.get('/', (req, res) => {
-    console.log(req);
-    return res.status(200).send('Hello world!');
+    fs.readFile('kalendar.json', "utf8", (err, data) => {
+        if(err){
+            return res.status(500).json({ error: 'Problem pri citanju fajla'});
+        }
+        res.json(JSON.parse(data));
+    })
 });
 
 const PORT = 3000;
