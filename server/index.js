@@ -9,7 +9,7 @@ app.use(cors());
 app.get('/', (req, res) => {
     fs.readFile('kalendar.json', "utf8", (err, data) => {
         if(err){
-            return res.status(500).json({ error: 'Problem pri citanju fajla'});
+            return res.status(500).json({ error: 'Problem pri citanju fajla!'});
         }
         res.json(JSON.parse(data));
     })
@@ -17,4 +17,4 @@ app.get('/', (req, res) => {
 
 const PORT = 3000;
 
-app.listen(PORT, () => console.log(`Server je pokrenut na portu ${PORT}`));
+app.listen(PORT, () => console.log(`Server je pokrenut na http://localhost:${PORT}`));
