@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
+import { DataType } from "../types/DataType";
 
-const HeroCalendar = () => {
+const HeroCalendar = (data: DataType) => {
     
     const [month, setMonth] = useState('');
     const currentMonth = new Date().getMonth();
@@ -48,13 +49,13 @@ const HeroCalendar = () => {
         }
 
         setCurrentMonth();
-    })
+    }, [currentMonth]);
 
 
   return (
     <div className="flex-row w-full h-auto rounded-lg">
         <nav className="w-full border-b border-black flex justify-center">
-            <span></span>
+            <span>{month}</span>
         </nav>
     </div>
   )
