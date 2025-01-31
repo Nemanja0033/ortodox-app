@@ -18,8 +18,6 @@ const Hero = () => {
       });
   }, []);
 
-  console.log(data, currentDate)
-
   return (
     <div className="md:w-96 w-full mt-12 flex-row place-self-center">
       <h1 className="text-2xl">Danas</h1>
