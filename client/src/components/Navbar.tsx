@@ -1,9 +1,26 @@
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react"
 
 const Navbar = () => {
 
     const [isOpen, setIsOpen] = useState(false);
+
+    if(isOpen){
+        return(
+            <div className="w-full absolute top-0 h-screen flex justify-center items-start text-2xl bg-amber-100">
+                <div className="flex-row mt-32">
+                    <button className="cursor-pointer" onClick={() => setIsOpen(!isOpen)}><X /></button>
+                    <b className="mb-10 text-3xl flex items-center">Православни Календар ☦️</b >
+                    <a href="#">Календар за целу годину</a>
+                    <br /><br />
+                    <a href="#">Постови</a>
+                    <br /><br />
+                    <a href="#">О апликацији</a>
+                    <br /><br />
+                </div>
+            </div>
+        )
+    }
 
   return (
     <nav className='w-full h-[50px] bg-amber-100 shadow-md items-center flex justify-between'>
@@ -16,7 +33,7 @@ const Navbar = () => {
             <a href="#">О апликацији</a>
         </div>
 
-        <button className="mr-5 cursor-pointer"><Menu /></button>
+        <button onClick={() => setIsOpen(!isOpen)} className="mr-5 md:hidden  cursor-pointer"><Menu /></button>
     </nav>
   )
 }
