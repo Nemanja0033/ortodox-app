@@ -4,10 +4,11 @@ import { useState } from "react"
 const Navbar = () => {
 
     const [isOpen, setIsOpen] = useState(false);
+    
 
     if(isOpen){
         return(
-            <div className="w-full absolute top-0 h-screen flex justify-center items-start text-2xl bg-amber-100">
+            <div  className="w-full absolute top-0 h-screen flex justify-center items-start text-2xl bg-[#D2665A]">
                 <div className="flex-row mt-32">
                     <button className="cursor-pointer" onClick={() => setIsOpen(!isOpen)}><X /></button>
                     <b className="mb-10 text-3xl flex items-center">Православни Календар ☦️</b >
@@ -23,18 +24,20 @@ const Navbar = () => {
     }
 
   return (
-    <nav className='w-full h-[50px] bg-amber-100 shadow-md items-center flex justify-between'>
-        <div className="flex justify-center md:ml-20 ml-5">
-            <b className="text-xl flex items-center">Православни Календар ☦️</b >
-        </div>
-        <div className="md:flex hidden justify-around gap-4 items-center mr-20">
-            <a href="#">Календар за целу годину</a>
-            <a href="#">Постови</a>
-            <a href="#">О апликацији</a>
-        </div>
+    <div className="flex justify-center items-center">
+        <nav className='md:w-[80%] w-[90%] rounded-full h-[70px] mt-5 bg-[#D2665A] shadow-md items-center flex justify-between'>
+            <div className="flex justify-center md:ml-20 ml-5">
+                <b className="text-xl flex items-center">Православни Календар ☦️</b >
+            </div>
+            <div className="md:flex hidden justify-around gap-4 items-center mr-20">
+                <a href="#">Календар за целу годину</a>
+                <a href="#">Постови</a>
+                <a href="#">О апликацији</a>
+            </div>
 
-        <button onClick={() => setIsOpen(!isOpen)} className="mr-5 md:hidden  cursor-pointer"><Menu /></button>
-    </nav>
+            <button onClick={() => setIsOpen(!isOpen)} className="mr-5 md:hidden  cursor-pointer"><Menu /></button>
+        </nav>
+    </div>
   )
 }
 
