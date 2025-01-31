@@ -19,16 +19,17 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="md:w-96 w-full mt-12 flex-row place-self-center">
-      <h1 className="text-2xl">Danas</h1>
+    <div className="flex justify-center">
+      <div className="md:w-[400px] h-96 w-full mt-12 flex-row place-self-center">
+      <h1 className="text-2xl">Danas {data.map((d) => (<span>{d.datum}</span>))}</h1>
           {data.map((d,index) => (
-            <TodayCard key={index} datum={d.datum.replace('2025-', '')} 
-            slika={d.slika}
+            <TodayCard key={index}
             praznik={d.praznik} 
             post={d.post} 
             crveno_slovo={d.crveno_slovo} 
            />
           ))}
+    </div>
     </div>
   )
 }
