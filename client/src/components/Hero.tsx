@@ -10,8 +10,6 @@ const Hero = () => {
   
   const currentDate = new Date().toISOString().split("T")[0];
 
-  console.log(currentDate)
-
   useEffect(() => {
     axios.get('http://localhost:3000/calendar')
       .then((response) => {

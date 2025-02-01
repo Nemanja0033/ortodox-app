@@ -34,7 +34,7 @@ const Navbar = () => {
                     <button className="cursor-pointer hover:text-amber-100" onClick={() => setIsOpenMonths(!isOpenMonths)}><X /></button>
                     {months.map((m, index) => (
                         <div className="grid" key={index}>
-                            <a className="text-3xl md:mt-2 mt-0.5 hover:text-amber-100" href="#">{m} 2025</a>
+                            <Link to={`/kalendar/${m}`} className="text-3xl md:mt-2 mt-0.5 hover:text-amber-100">{m} 2025</Link>
                         </div>
                     ))}
                 </div>
@@ -45,7 +45,7 @@ const Navbar = () => {
 
   return (
     <div className="flex justify-center items-center">
-        <nav className='md:w-[80%] w-[90%] rounded-full h-[70px] mt-5 bg-[#D2665A] shadow-md items-center flex justify-between'>
+        <nav className='md:w-[80%] w-[90%] rounded-full h-[70px] mt-5 bg-[#D2665A] items-center flex justify-between'>
             <div className="flex justify-center md:ml-20 ml-5">
                 <b className="text-xl flex items-center">Православни Календар ☦️</b >
             </div>
