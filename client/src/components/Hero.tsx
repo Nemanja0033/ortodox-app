@@ -2,11 +2,12 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import TodayCard from "./TodayCard";
 import HeroCalendar from "./HeroCalendar";
+import { useCurrentMonth } from "../context/CurrentMonthContext";
 
 const Hero = () => {
-
   const [data, setData] = useState<any[]>([]);
-  const [calendarData, setCalendarData] = useState<any[]>([]);
+  const [calendarData, setCalendarData] = useState<any>();
+  const { month } = useCurrentMonth();
   
   const currentDate = new Date().toISOString().split("T")[0];
 
@@ -14,7 +15,7 @@ const Hero = () => {
     axios.get('http://localhost:3000/calendar')
       .then((response) => {
         setData(response.data.dani.filter((d: any) => d.datum === currentDate));  // storing data for TodayCard component
-        setCalendarData(response.data.dani); // storing data for hero calendar component
+        setCalendarData(response.data.dani.filter((d: any) => d.mesec === month)); // storing data for hero calendar component
       })
       .catch((error) => {
         console.log(error);
@@ -37,11 +38,7 @@ const Hero = () => {
           </div>
 
           <div>
-            <HeroCalendar datum={""}
-                          praznik={""} 
-                          crveno_slovo={""} 
-                          post={""}                     
-                          />
+            <HeroCalendar data={calendarData}/>
           </div>
     </div>
     </div>

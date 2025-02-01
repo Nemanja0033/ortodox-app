@@ -64,5 +64,10 @@ export const CurrentMonthProvider = ({children}: {children: ReactNode}) => {
 
 export const useCurrentMonth = () => {
     const context = useContext(CurrentMonth);
-    return context;
+    if (!context) {
+        throw new Error("useCurrentMonth must be used within a CurrentMonthProvider");
+      }
+    else{
+        return context;
+    }
 }

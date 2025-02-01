@@ -1,7 +1,6 @@
 import { TodayCardComponnetType } from "../types/TodayCardComponentType"
 
 const TodayCard = ({praznik, post, crveno_slovo, slika}: TodayCardComponnetType) => {
-  console.log(slika)
   return (
     <div className="w-full rounded-full h-auto cursor-pointer transition-all flex-row  shadow-md items-center bg-[#D2665A]">
       <div className="flex justify-around items-center m-3">
