@@ -1,61 +1,14 @@
-import { useEffect, useState } from "react";
+import { useCurrentMonth } from "../context/CurrentMonthContext";
 import { DataType } from "../types/DataType";
 
-const HeroCalendar = (data: DataType) => {
-    
-    const [month, setMonth] = useState('');
-    const currentMonth = new Date().getMonth();
+const HeroCalendar = ({praznik, datum, crveno_slovo, post}: DataType) => {
 
-    useEffect(() => {
-        const setCurrentMonth = () => {
-            switch(currentMonth){
-                case 1:
-                    setMonth('Јануар');
-                break;
-                case 2:
-                    setMonth('Фебруар');
-                break;
-                case 3:
-                    setMonth('Март');
-                break;
-                case 4:
-                    setMonth('Април');
-                break;
-                case 5:
-                    setMonth('Мај');
-                break;
-                case 6:
-                    setMonth('Јун');
-                break;
-                case 7:
-                    setMonth('Јул');
-                break;
-                case 8:
-                    setMonth('Август');
-                break;
-                case 9:
-                    setMonth('Септембар');
-                break;
-                case 10:
-                    setMonth('Октобар');
-                break;
-                case 11:
-                    setMonth('Новембар');
-                break;
-                case 12:
-                    setMonth('Децембар');
-                break;
-            }
-        }
-
-        setCurrentMonth();
-    }, [currentMonth]);
-
-
+  const {month} = useCurrentMonth();
+  
   return (
-    <div className="flex-row w-full h-auto rounded-lg">
-        <nav className="w-full border-b border-black flex justify-center">
-            <span>{month}</span>
+    <div className="flex-row w-full h-auto rounded-full bg-[#D2665A]">
+        <nav className="w-full h-12 items-center flex justify-center mb-2">
+            <span className="font-bold text-xl">{month}</span>
         </nav>
     </div>
   )
