@@ -30,10 +30,10 @@ const Navbar = () => {
             <div className="flex justify-center">
                 <div className="md:w-[80%] w-full absolute rounded-2xl top-0 h-screen flex justify-center items-start text-2xl bg-[#D2665A]">
                 <div className="flex-row mt-10">
-                    <button className="cursor-pointer" onClick={() => setIsOpenMonths(!isOpenMonths)}><X /></button>
+                    <button className="cursor-pointer hover:text-red-500" onClick={() => setIsOpenMonths(!isOpenMonths)}><X /></button>
                     {months.map((m, index) => (
-                        <div key={index}>
-                            <a href="#">{m} 2025</a>
+                        <div className="grid" key={index}>
+                            <a className="text-3xl md:mt-2 mt-0.5" href="#">{m} 2025</a>
                         </div>
                     ))}
                 </div>
