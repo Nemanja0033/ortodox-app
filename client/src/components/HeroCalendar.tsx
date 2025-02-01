@@ -6,7 +6,7 @@ const HeroCalendar = ({data}: any) => {
 
   
   return (
-    <div className="flex-row w-full h-auto rounded-2xl bg-[#D2665A]">
+    <div className="flex-row w-full h-auto rounded-2xl bg-amber-100 shadow-lg">
         <nav className="w-full h-12 items-center flex justify-center mb-2">
             <span className="font-bold text-xl">{month}</span>
         </nav>

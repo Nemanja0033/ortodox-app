@@ -30,9 +30,9 @@
       { "mesec": "Јануар", "datum": "2025-01-28", "praznik": "Преподобни Павле; преподобни Гаврило Лесновски", "post": "мрс", "crveno_slovo": "не" },
       { "mesec": "Јануар", "datum": "2025-01-29", "praznik": "СЛАВА Часне вериге Светог апостола Петра; Преподобни Ромило Раванички", "post": "Уље", "crveno_slovo": "не" },
       { "mesec": "Јануар", "datum": "2025-01-30", "slika":"https://svetigora.com/wp-content/uploads/2022/01/prepodobni-antonije-veliki-480x667.jpg", "praznik": "Преподобни Антоније Велики", "post": "мрс", "crveno_slovo": "не" },
-      { "mesec": "Јануар", "datum": "2025-01-31", "slika":"https://svetigora.com/wp-content/uploads/2022/02/prepodobni-makarije-egipatski--480x641.jpg", "praznik": "Свети Атанасије Велики; Свети Максим архиепископ српски", "post": "Уље", "crveno_slovo": "не" },
+      { "mesec": "Јануар", "datum": "2025-01-31", "praznik": "Свети Атанасије Велики; Свети Максим архиепископ српски", "post": "Уље", "crveno_slovo": "не" },
 
-      { "mesec": "Фебруар", "datum": "2025-02-01", "praznik": "Преподобни Макарије Египатски; Свети Марко Ефески", "post": "мрс", "crveno_slovo": "не" },
+      { "mesec": "Фебруар", "datum": "2025-02-01", "slika":"https://svetigora.com/wp-content/uploads/2022/02/prepodobni-makarije-egipatski--480x641.jpg", "praznik": "Преподобни Макарије Египатски; Свети Марко Ефески", "post": "мрс", "crveno_slovo": "не" },
       { "mesec": "Фебруар", "datum": "2025-02-02", "praznik": "Преподобни Јевтимије Велики", "post": "мрс", "crveno_slovo": "Да" },
       { "mesec": "Фебруар", "datum": "2025-03-02", "praznik": "Преподобни Максим Исповедник; Свети мученик Неофит", "post": "мрс", "crveno_slovo": "не" },
       { "mesec": "Фебруар", "datum": "2025-04-02", "praznik": "Свети апостол Тимотеј; Преподобни мученик Анастасије", "post": "мрс", "crveno_slovo": "не" },

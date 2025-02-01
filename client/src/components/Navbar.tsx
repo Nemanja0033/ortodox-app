@@ -11,7 +11,7 @@ const Navbar = () => {
 
     if(isOpen){
         return(
-            <div  className="w-full absolute top-0 h-screen flex justify-center items-start text-2xl bg-[#D2665A]">
+            <div  className="w-full absolute top-0 h-screen flex justify-center items-start text-2xl bg-amber-100">
                 <div className="flex-row mt-32">
                     <button className="cursor-pointer" onClick={() => setIsOpen(!isOpen)}><X /></button>
                     <b className="mb-10 text-3xl flex items-center">Православни Календар ☦️</b >
@@ -29,7 +29,7 @@ const Navbar = () => {
     if(isOpenMonths){
         return(
             <div className="flex justify-center">
-                <div className="md:w-[80%] w-full absolute rounded-2xl top-0 h-screen flex justify-center items-start text-2xl bg-[#D2665A]">
+                <div className="md:w-[80%] w-full absolute rounded-2xl top-0 h-screen flex justify-center items-start text-2xl bg-amber-100">
                 <div className="flex-row mt-10">
                     <button className="cursor-pointer hover:text-amber-100" onClick={() => setIsOpenMonths(!isOpenMonths)}><X /></button>
                     {months.map((m, index) => (
@@ -45,7 +45,7 @@ const Navbar = () => {
 
   return (
     <div className="flex justify-center items-center">
-        <nav className='md:w-[80%] w-[90%] rounded-full h-[70px] mt-5 bg-[#D2665A] items-center flex justify-between'>
+        <nav className='md:w-[80%] w-[90%] rounded-full h-[70px] mt-5 bg-amber-100 items-center flex justify-between'>
             <div className="flex justify-center md:ml-20 ml-5">
                 <b className="text-xl flex items-center">Православни Календар ☦️</b >
             </div>
