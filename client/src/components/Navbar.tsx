@@ -1,6 +1,7 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react"
 import { months } from "../utils/moths";
+import { Link } from "react-router";
 
 const Navbar = () => {
 
@@ -49,9 +50,9 @@ const Navbar = () => {
                 <b className="text-xl flex items-center">Православни Календар ☦️</b >
             </div>
             <div className="md:flex hidden justify-around gap-4 items-center mr-20">
-                <a onClick={() => setIsOpenMonths(!isOpenMonths)} href="#">Календар за целу годину</a>
-                <a href="#">Постови</a>
-                <a href="#">О апликацији</a>
+                <Link to={''} onClick={() => setIsOpenMonths(!isOpenMonths)}>Календар за целу годину</Link>
+                <Link to={'/post'}>Постови</Link>
+                <Link to={'/o-aplikaciji'}>О апликацији</Link>
             </div>
 
             <button onClick={() => setIsOpen(!isOpen)} className="mr-5 md:hidden  cursor-pointer"><Menu /></button>

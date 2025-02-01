@@ -1,7 +1,7 @@
 
 const PostPage = () => {
   return (
-    <div>PostPage</div>
+    <div className="text-red-500">PostPage</div>
   )
 }
 
