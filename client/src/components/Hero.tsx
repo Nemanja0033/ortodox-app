@@ -38,7 +38,7 @@ const Hero = () => {
             ))}
           </div>
 
-          <div>
+          <div className="mt-12">
             <HeroCalendar data={calendarData}/>
           </div>
     </div>
