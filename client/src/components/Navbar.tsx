@@ -1,9 +1,11 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react"
+import { months } from "../utils/moths";
 
 const Navbar = () => {
 
     const [isOpen, setIsOpen] = useState(false);
+    const [isOpenMonths, setIsOpenMonths] = useState(false);
     
 
     if(isOpen){
@@ -23,6 +25,23 @@ const Navbar = () => {
         )
     }
 
+    if(isOpenMonths){
+        return(
+            <div className="flex justify-center">
+                <div className="md:w-[80%] w-full absolute rounded-2xl top-0 h-screen flex justify-center items-start text-2xl bg-[#D2665A]">
+                <div className="flex-row mt-10">
+                    <button className="cursor-pointer" onClick={() => setIsOpenMonths(!isOpenMonths)}><X /></button>
+                    {months.map((m, index) => (
+                        <div key={index}>
+                            <a href="#">{m} 2025</a>
+                        </div>
+                    ))}
+                </div>
+            </div>
+            </div>
+        )
+    }
+
   return (
     <div className="flex justify-center items-center">
         <nav className='md:w-[80%] w-[90%] rounded-full h-[70px] mt-5 bg-[#D2665A] shadow-md items-center flex justify-between'>
@@ -30,7 +49,7 @@ const Navbar = () => {
                 <b className="text-xl flex items-center">Православни Календар ☦️</b >
             </div>
             <div className="md:flex hidden justify-around gap-4 items-center mr-20">
-                <a href="#">Календар за целу годину</a>
+                <a onClick={() => setIsOpenMonths(!isOpenMonths)} href="#">Календар за целу годину</a>
                 <a href="#">Постови</a>
                 <a href="#">О апликацији</a>
             </div>
