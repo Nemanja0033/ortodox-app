@@ -1,3 +1,4 @@
+import { MoveLeft, MoveRight } from "lucide-react";
 import { useCurrentMonth } from "../context/CurrentMonthContext";
 
 const HeroCalendar = ({data}: any) => {
@@ -7,8 +8,10 @@ const HeroCalendar = ({data}: any) => {
   
   return (
     <div className="flex-row w-full h-auto rounded-2xl bg-transparent">
-        <nav className="w-full h-12 items-center bg-amber-100 rounded-full rouden full flex justify-center mb-2">
+        <nav className="w-full h-12 items-center bg-amber-100 rounded-full rouden full flex justify-between mb-2">
+            <button className="ml-5 rounded-full hover:bg-gray-100 cursor-pointer hover:scale-105 transition-all"><MoveLeft  size={24}/></button>
             <span className="font-bold text-xl">{month}</span>
+            <button className="mr-5 cursor-pointer hover:scale-105 transition-all "><MoveRight  size={24}/></button>
         </nav>
 
         <div className="flex-row w-full mt-3 bg-amber-100 rounded-xl">

@@ -1,4 +1,4 @@
-import { Menu, X } from "lucide-react";
+import { Calendar, Menu, X } from "lucide-react";
 import { useState } from "react"
 import { months } from "../utils/moths";
 import { Link } from "react-router";
@@ -50,7 +50,7 @@ const Navbar = () => {
                 <b className="text-xl flex items-center">Православни Календар ☦️</b >
             </div>
             <div className="md:flex hidden justify-around gap-4 items-center mr-20">
-                <Link to={''} onClick={() => setIsOpenMonths(!isOpenMonths)}>Календар за целу годину</Link>
+                <Link className="flex items-center gap-1" to={''} onClick={() => setIsOpenMonths(!isOpenMonths)}>Календар за целу годину <Calendar size={16} /></Link>
                 <Link to={'/post'}>Постови</Link>
                 <Link to={'/o-aplikaciji'}>О апликацији</Link>
             </div>
