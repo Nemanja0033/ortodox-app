@@ -16,7 +16,7 @@ export const LanguageContextProvider = ({children}: {children: ReactNode}) => {
 
     useEffect(() => {
         let lang = localStorage.getItem("lang");
-        setLanguage(lang)
+        setLanguage(lang);
     }, [])
 
     return(

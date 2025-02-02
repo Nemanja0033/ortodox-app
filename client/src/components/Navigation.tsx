@@ -28,7 +28,7 @@ const Navbar = () => {
 
     if(isOpenMonths){
         return(
-            <div className="flex justify-center z-10">
+            <div className="flex justify-center z-50">
                 <div className="md:w-[80%] w-full absolute rounded-2xl top-0 h-screen flex justify-center items-start text-2xl bg-amber-100">
                 <div className="flex-row mt-10">
                     <button className="cursor-pointer hover:text-amber-100" onClick={() => setIsOpenMonths(!isOpenMonths)}><X /></button>

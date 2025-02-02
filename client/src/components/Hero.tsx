@@ -3,11 +3,13 @@ import { useState, useEffect } from "react";
 import TodayCard from "./TodayCard";
 import HeroCalendar from "./HeroCalendar";
 import { useCurrentMonth } from "../context/CurrentMonthContext";
+import { useLanguage } from "../context/LanguageContext";
 
 const Hero = () => {
   const [data, setData] = useState<any[]| null>(null);
   const [calendarData, setCalendarData] = useState<any>();
   const { month } = useCurrentMonth();
+  const { language } = useLanguage();
   const [loading, setLoading] = useState(true);
   
   const currentDate = new Date().toISOString().split("T")[0];
@@ -28,7 +30,7 @@ const Hero = () => {
   return (
     <div className="flex justify-center">
       <div  className="md:w-[700px] h-96 w-full mt-12 flex-row place-self-center">
-      <h1 className="text-2xl md:text-start text-center text-black">Данас је {data?.map((d, index) => (<span key={index}>{d.datum}</span>))}</h1>
+      <h1 className="text-2xl md:text-start text-center text-black">{language === 'СР' ? 'Данас је' : 'Danas je'} {data?.map((d, index) => (<span key={index}>{d.datum}</span>))}</h1>
           <div>
             {data?.map((d,index) => (
               <TodayCard key={index}
