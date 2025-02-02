@@ -4,6 +4,7 @@ import TodayCard from "./TodayCard";
 import HeroCalendar from "./HeroCalendar";
 import { useCurrentMonth } from "../context/CurrentMonthContext";
 import { useLanguage } from "../context/LanguageContext";
+import { currentDate } from "../constants/currentDate";
 
 const Hero = () => {
   const [data, setData] = useState<any[]| null>(null);
@@ -11,8 +12,6 @@ const Hero = () => {
   const { month } = useCurrentMonth();
   const { language } = useLanguage();
   const [loading, setLoading] = useState(true);
-  
-  const currentDate = new Date().toISOString().split("T")[0];
 
   useEffect(() => {
     axios.get('http://localhost:3000/calendar')
