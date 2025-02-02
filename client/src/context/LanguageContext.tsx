@@ -1,17 +1,23 @@
-import { createContext, ReactNode, useContext, useState } from "react";
+import { createContext, ReactNode, useContext, useEffect, useState } from "react";
 
 interface LanguageContextProps {
-    language: string,
+    language: string | null,
     toggleLanguage: any
 } 
 
 const LanguageContext = createContext<LanguageContextProps | null>(null);
 
 export const LanguageContextProvider = ({children}: {children: ReactNode}) => {
-    const [language, setLanguage] = useState('SR');
+    const [language, setLanguage] = useState<string | null>('SR');
     const toggleLanguage = () => {
-        setLanguage('СР');
+        setLanguage(language === 'SR' ? "СР" : "SR");
+        localStorage.setItem("lang", language?? '');
     }
+
+    useEffect(() => {
+        let lang = localStorage.getItem("lang");
+        setLanguage(lang)
+    }, [])
 
     return(
         <LanguageContext.Provider value={{language, toggleLanguage}}>

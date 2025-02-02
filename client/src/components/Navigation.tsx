@@ -1,11 +1,13 @@
-import { Calendar, Menu, X } from "lucide-react";
+import { Calendar, Languages, Menu, X } from "lucide-react";
 import { useState } from "react"
 import { months } from "../utils/moths";
 import { Link } from "react-router";
+import { useLanguage } from "../context/LanguageContext";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isOpenMonths, setIsOpenMonths] = useState(false);
+    const {language, toggleLanguage} = useLanguage();
     
     if(isOpen){
         return(
@@ -45,12 +47,13 @@ const Navbar = () => {
     <div className="flex justify-center items-center">
         <nav className='md:w-[80%] w-[90%] rounded-full h-[70px] mt-5  bg-amber-100/40 hover:bg-amber-100 backdrop-blur-sms transition-all items-center flex justify-between'>
             <div className="flex justify-center md:ml-20 ml-5">
-                <b className="text-xl flex items-center">Православни Календар ☦️</b >
+                <b className="text-xl flex items-center">{language === 'СР' ? 'Православни Календар' : 'Pravoslavni Kalendar'} ☦️</b >
             </div>
             <div className="md:flex hidden justify-around gap-4 items-center mr-20">
-                <Link className="flex items-center gap-1" to={''} onClick={() => setIsOpenMonths(!isOpenMonths)}>Календар за целу годину <Calendar size={16} /></Link>
-                <Link to={'/post'}>Постови</Link>
-                <Link className="border-r pr-3" to={'/o-aplikaciji'}>О апликацији</Link>
+                <Link className="flex items-center gap-1 hover:text-amber-500" to={''} onClick={() => setIsOpenMonths(!isOpenMonths)}>{language === 'СР' ? 'Календар за целу годину' : 'Kalendar za celu godinu'} <Calendar size={16} /></Link>
+                <Link className="hover:text-amber-500" to={'/post'}>{language === 'СР' ? 'Постови' : 'Postovi'}</Link>
+                <Link className="border-r pr-3 hover:text-amber-500" to={'/o-aplikaciji'}>{language === 'СР' ? 'О апликацији' : 'O aplikaciji'}</Link>
+                <button onClick={toggleLanguage} className="cursor-pointer hover:text-amber-500 flex gap-1 items-center"><Languages size={20} />SR/СР</button>
             </div>
 
             <button onClick={() => setIsOpen(!isOpen)} className="mr-5 md:hidden  cursor-pointer"><Menu /></button>
