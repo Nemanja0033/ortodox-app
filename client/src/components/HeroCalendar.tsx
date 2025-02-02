@@ -1,9 +1,14 @@
 import { useCurrentMonth } from "../context/CurrentMonthContext";
 
-const HeroCalendar = ({data}: any) => {
+const HeroCalendar = ({data, loading}: any) => {
 
   const {month} = useCurrentMonth();
 
+  if(loading || !data){
+    return(
+      <p className="animate-bounce text-2xl text-center">Учитавање података. . .</p>
+    )
+  }
   
   return (
     <div className="flex-row w-full h-auto rounded-2xl bg-transparent">
