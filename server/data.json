@@ -33,7 +33,7 @@
       { "mesec": "Јануар", "datum": "2025-01-31", "praznik": "Свети Атанасије Велики; Свети Максим архиепископ српски", "post": "Уље", "crveno_slovo": "не" },
 
       { "mesec": "Фебруар", "datum": "2025-02-01", "slika":"https://svetigora.com/wp-content/uploads/2022/02/prepodobni-makarije-egipatski--480x641.jpg", "praznik": "Преподобни Макарије Египатски; Свети Марко Ефески", "post": "мрс", "crveno_slovo": "не" },
-      { "mesec": "Фебруар", "datum": "2025-02-02", "praznik": "Преподобни Јевтимије Велики", "post": "мрс", "crveno_slovo": "Да" },
+      { "mesec": "Фебруар", "datum": "2025-02-02", "slika":"http://arhiva.spc.rs/files/u5/2011/4/prepodobni-jevtimije-veliki.jpg", "praznik": "Преподобни Јевтимије Велики", "post": "мрс", "crveno_slovo": "Да" },
       { "mesec": "Фебруар", "datum": "2025-03-02", "praznik": "Преподобни Максим Исповедник; Свети мученик Неофит", "post": "мрс", "crveno_slovo": "не" },
       { "mesec": "Фебруар", "datum": "2025-04-02", "praznik": "Свети апостол Тимотеј; Преподобни мученик Анастасије", "post": "мрс", "crveno_slovo": "не" },
       { "mesec": "Фебруар", "datum": "2025-05-02", "praznik": "Свети свештеномученик Климент Анкирски", "post": "Вода", "crveno_slovo": "не" },
