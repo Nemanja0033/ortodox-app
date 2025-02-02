@@ -4,7 +4,7 @@ import { useTheme } from "../context/ThemeContext";
 const HeroCalendar = ({data, loading}: any) => {
 
   const {month} = useCurrentMonth();
-  const {theme, toggleTheme} = useTheme();
+  const { theme } = useTheme();
 
   if(loading || !data){
     return(

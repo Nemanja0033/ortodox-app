@@ -10,8 +10,11 @@ const LanguageContext = createContext<LanguageContextProps | null>(null);
 export const LanguageContextProvider = ({children}: {children: ReactNode}) => {
     const [language, setLanguage] = useState<string | null>('SR');
     const toggleLanguage = () => {
-        setLanguage(language === 'SR' ? "СР" : "SR");
-        localStorage.setItem("lang", language?? '');
+        setLanguage((prevTheme) => {
+            const newTheme = prevTheme === 'SR' ? 'СР' : 'SR';
+            localStorage.setItem('lang', newTheme);
+            return newTheme;
+        });
     }
 
     useEffect(() => {
