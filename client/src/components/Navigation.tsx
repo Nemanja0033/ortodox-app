@@ -4,14 +4,12 @@ import { months } from "../utils/moths";
 import { Link } from "react-router";
 
 const Navbar = () => {
-
     const [isOpen, setIsOpen] = useState(false);
     const [isOpenMonths, setIsOpenMonths] = useState(false);
     
-
     if(isOpen){
         return(
-            <div  className="w-full absolute top-0 h-screen flex justify-center items-start text-2xl bg-amber-100">
+            <div  className="w-full z-10 absolute top-0 h-screen flex justify-center items-start text-2xl bg-amber-100">
                 <div className="flex-row mt-32">
                     <button className="cursor-pointer" onClick={() => setIsOpen(!isOpen)}><X /></button>
                     <b className="mb-10 text-3xl flex items-center">Православни Календар ☦️</b >
@@ -28,7 +26,7 @@ const Navbar = () => {
 
     if(isOpenMonths){
         return(
-            <div className="flex justify-center">
+            <div className="flex justify-center z-10">
                 <div className="md:w-[80%] w-full absolute rounded-2xl top-0 h-screen flex justify-center items-start text-2xl bg-amber-100">
                 <div className="flex-row mt-10">
                     <button className="cursor-pointer hover:text-amber-100" onClick={() => setIsOpenMonths(!isOpenMonths)}><X /></button>
@@ -52,7 +50,7 @@ const Navbar = () => {
             <div className="md:flex hidden justify-around gap-4 items-center mr-20">
                 <Link className="flex items-center gap-1" to={''} onClick={() => setIsOpenMonths(!isOpenMonths)}>Календар за целу годину <Calendar size={16} /></Link>
                 <Link to={'/post'}>Постови</Link>
-                <Link to={'/o-aplikaciji'}>О апликацији</Link>
+                <Link className="border-r pr-3" to={'/o-aplikaciji'}>О апликацији</Link>
             </div>
 
             <button onClick={() => setIsOpen(!isOpen)} className="mr-5 md:hidden  cursor-pointer"><Menu /></button>
