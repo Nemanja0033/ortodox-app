@@ -1,6 +1,19 @@
 @import "tailwindcss";
 
-body{
+body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: antiquewhite;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b, #ff7e5f);
+    background-size: 200% 200%;
+    animation: gradientMove 2s infinite alternate ease-in-out;
+    height: 100vh;
+    margin: 0;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
 }

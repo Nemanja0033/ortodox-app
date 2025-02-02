@@ -11,7 +11,6 @@ const Hero = () => {
   const [loading, setLoading] = useState(true);
   
   const currentDate = new Date().toISOString().split("T")[0];
-  console.log(calendarData)
 
   useEffect(() => {
     axios.get('http://localhost:3000/calendar')
@@ -41,7 +40,7 @@ const Hero = () => {
             ))}
           </div>
 
-          <div className="mt-12">
+          <div className="mt-12 mb-12">
             <HeroCalendar data={calendarData} loading={loading}/>
           </div>
     </div>

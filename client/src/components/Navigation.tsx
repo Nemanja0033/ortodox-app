@@ -45,7 +45,7 @@ const Navbar = () => {
 
   return (
     <div className="flex justify-center items-center">
-        <nav className='md:w-[80%] w-[90%] rounded-full h-[70px] mt-5 bg-amber-100 items-center flex justify-between'>
+        <nav className='md:w-[80%] w-[90%] rounded-full h-[70px] mt-5  bg-amber-100/40 hover:bg-amber-100 backdrop-blur-sms transition-all items-center flex justify-between'>
             <div className="flex justify-center md:ml-20 ml-5">
                 <b className="text-xl flex items-center">Православни Календар ☦️</b >
             </div>

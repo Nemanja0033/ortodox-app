@@ -8,8 +8,8 @@ const CurrentMonth = createContext<CurrentMonthProps | null>(null);
 
 export const CurrentMonthProvider = ({children}: {children: ReactNode}) => {
         const [month, setMonth] = useState('');
-        const currentMonth = new Date().getMonth();
-    
+        let currentMonth = new Date().getMonth();
+
         useEffect(() => {
             const setCurrentMonth = () => {
                 switch(currentMonth){
