@@ -1,17 +1,19 @@
-import { Calendar, Languages, Menu, X } from "lucide-react";
+import { Calendar, Languages, Menu, SunMoon, X } from "lucide-react";
 import { useState } from "react"
 import { months } from "../utils/moths";
 import { Link } from "react-router";
 import { useLanguage } from "../context/LanguageContext";
+import { useTheme } from "../context/ThemeContext";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isOpenMonths, setIsOpenMonths] = useState(false);
     const {language, toggleLanguage} = useLanguage();
+    const {theme, toggleTheme} = useTheme();
     
     if(isOpen){
         return(
-            <div  className="w-full z-10 absolute top-0 h-screen flex justify-center items-start text-2xl bg-amber-100">
+            <div className={`w-full z-10 absolute top-0 h-screen flex justify-center items-start text-2xl ${theme === 'light' ? 'bg-amber-100' : 'bg-black'}`}>
                 <div className="flex-row mt-32">
                     <button className="cursor-pointer" onClick={() => setIsOpen(!isOpen)}><X /></button>
                     <b className="mb-10 text-3xl flex items-center">Православни Календар ☦️</b >
@@ -45,7 +47,7 @@ const Navbar = () => {
 
   return (
     <div className="flex justify-center items-center">
-        <nav className='md:w-[80%] w-[90%] rounded-full h-[70px] mt-5  bg-amber-100/40 hover:bg-amber-100 backdrop-blur-sms transition-all items-center flex justify-between'>
+        <nav className={`md:w-[80%] w-[90%] rounded-full h-[70px] mt-5 ${theme === 'light' ? 'bg-amber-100/40 hover:bg-amber-100' : 'bg-black text-white'} backdrop-blur-sms transition-all items-center flex justify-between`}>
             <div className="flex justify-center md:ml-20 ml-5">
                 <b className="text-xl flex items-center">{language === 'СР' ? 'Православни Календар' : 'Pravoslavni Kalendar'} ☦️</b >
             </div>
@@ -54,6 +56,7 @@ const Navbar = () => {
                 <Link className="hover:text-amber-500" to={'/post'}>{language === 'СР' ? 'Постови' : 'Postovi'}</Link>
                 <Link className="border-r pr-3 hover:text-amber-500" to={'/o-aplikaciji'}>{language === 'СР' ? 'О апликацији' : 'O aplikaciji'}</Link>
                 <button onClick={toggleLanguage} className="cursor-pointer hover:text-amber-500 flex gap-1 items-center"><Languages size={20} />SR/СР</button>
+                <button onClick={toggleTheme} className="cursor-pointer hover:text-amber-500"><SunMoon /></button>
             </div>
 
             <button onClick={() => setIsOpen(!isOpen)} className="mr-5 md:hidden  cursor-pointer"><Menu /></button>

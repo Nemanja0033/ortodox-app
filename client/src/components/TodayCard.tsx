@@ -1,9 +1,12 @@
+import { useTheme } from "../context/ThemeContext"
 import { TodayCardComponnetType } from "../types/TodayCardComponentType"
 
 const TodayCard = ({praznik, post, crveno_slovo, slika}: TodayCardComponnetType) => {
-  console.log(slika)
+
+  const {theme, toggleTheme} = useTheme();
+
   return (
-    <div className="w-full rounded-full h-32 cursor-pointer transition-all flex-row  shadow-md items-center bg-amber-100">
+    <div className={`w-full rounded-full h-32 cursor-pointer transition-all flex-row shadow-md items-center ${theme === 'light' ? 'bg-amber-100' : 'bg-black text-white'}`}>
       <div className="flex justify-around items-center m-3">
         <img className="md:w-30 z-0 relative md:right-10 right-3 w-30 h-32 rounded-full" src={slika ?? ''} alt="" />
       <div className="flex-row m-4">
