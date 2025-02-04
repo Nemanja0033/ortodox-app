@@ -8,7 +8,7 @@ const CurrentMonth = createContext<CurrentMonthProps | null>(null);
 
 export const CurrentMonthProvider = ({children}: {children: ReactNode}) => {
         const [month, setMonth] = useState('');
-        let currentMonth = new Date().getMonth();
+        let currentMonth = new Date().getMonth() + 1; // adding + 1 for matching actual months order
 
         useEffect(() => {
             const setCurrentMonth = () => {

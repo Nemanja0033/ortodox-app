@@ -5,12 +5,14 @@ import HeroCalendar from "./HeroCalendar";
 import { useCurrentMonth } from "../context/CurrentMonthContext";
 import { useLanguage } from "../context/LanguageContext";
 import { currentDate } from "../constants/currentDate";
+import { useTheme } from "../context/ThemeContext";
 
 const Hero = () => {
   const [data, setData] = useState<any[]| null>(null);
   const [calendarData, setCalendarData] = useState<any>();
   const { month } = useCurrentMonth();
   const { language } = useLanguage();
+  const { theme } = useTheme();
   const [loading, setLoading] = useState(true);
   console.log(currentDate, data)
 
@@ -43,6 +45,7 @@ const Hero = () => {
           </div>
 
           <div className="mt-12 mb-12">
+            <h1 className={`${theme === 'light' ? 'text-black' : 'text-white'} text-2xl mb-3`}>{language === 'СР' ? 'Календар ѕа месец дана' : 'Kalendar za mesec dana' }</h1>
             <HeroCalendar data={calendarData} loading={loading}/>
           </div>
     </div>
