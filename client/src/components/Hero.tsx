@@ -12,6 +12,7 @@ const Hero = () => {
   const { month } = useCurrentMonth();
   const { language } = useLanguage();
   const [loading, setLoading] = useState(true);
+  console.log(currentDate, data)
 
   useEffect(() => {
     axios.get('http://localhost:3000/calendar')

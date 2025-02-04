@@ -21,7 +21,7 @@ const HeroCalendar = ({data, loading}: any) => {
 
         <div className="flex-row w-full overflow-auto h-80 mt-3 bg-transparent rounded-xl">
           {data?.map((d:any, index: number) => (
-            <div key={index} className={`flex justify-between ${d.datum === currentDate ? 'bg-amber-200' : ''} ${theme === 'light' ? 'bg-amber-100/40 hover:bg-amber-100' : 'bg-black text-white'} transition-all cursor-pointer mt-1 shadow-md rounded-full items-center w-full`}>
+            <div key={index} className={`flex justify-between ${d.datum === currentDate ? 'bg-amber-200' : ''} ${theme === 'light' ? 'bg-amber-100/40 hover:bg-amber-100' : 'bg-black/70 hover:bg-black text-white'} transition-all cursor-pointer mt-1 shadow-md rounded-full items-center w-full`}>
               <div className="flex-row ml-3">
                 <span className="md:text-xl text-md">{d.datum.replace('2025-', '')}</span>
                 <br />
