@@ -6,10 +6,11 @@ const HeroCalendar = ({data, loading}: any) => {
 
   const {month} = useCurrentMonth();
   const { theme } = useTheme();
+  console.log(data)
 
-  if(loading || !data){
+  if(loading || data.length == 0){
     return(
-      <p className="animate-bounce text-2xl text-center">Учитавање података. . .</p>
+      <p className="animate-bounce text-2xl text-center">Учитавање података. . . Молимо вас освежите страницу</p>
     )
   }
   
