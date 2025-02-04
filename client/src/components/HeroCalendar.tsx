@@ -1,12 +1,15 @@
+import { useRef } from "react";
 import { currentDate } from "../constants/currentDate";
 import { useCurrentMonth } from "../context/CurrentMonthContext";
 import { useTheme } from "../context/ThemeContext";
+import { useAnim } from "../hooks/useAnim";
 
 const HeroCalendar = ({data, loading}: any) => {
 
   const {month} = useCurrentMonth();
   const { theme } = useTheme();
-  console.log(data)
+  const heroCalendarRef = useRef<HTMLDivElement | null>(null);
+  useAnim(heroCalendarRef);
 
   if(loading || data.length == 0){
     return(
@@ -15,7 +18,7 @@ const HeroCalendar = ({data, loading}: any) => {
   }
   
   return (
-    <div className="flex-row w-full h-auto rounded-2xl bg-transparent">
+    <div ref={heroCalendarRef} className="flex-row w-full h-auto rounded-2xl bg-transparent">
         <nav className={`w-full h-12 items-center ${theme === 'light' ? 'bg-amber-100' : 'bg-black text-white'} rounded-full shadow-md flex justify-center mb-2`}>
             <span className="font-bold text-xl">{month}</span>
         </nav>

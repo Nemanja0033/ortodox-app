@@ -1,12 +1,16 @@
+import { useRef } from "react";
 import { useTheme } from "../context/ThemeContext"
 import { TodayCardComponnetType } from "../types/TodayCardComponentType"
+import { useAnim } from "../hooks/useAnim";
 
 const TodayCard = ({praznik, post, crveno_slovo, slika}: TodayCardComponnetType) => {
 
   const {theme} = useTheme();
+  const todayCardRef = useRef<HTMLDivElement | null>(null);
+  useAnim(todayCardRef, 50);
 
   return (
-    <div className={`w-full rounded-full h-32 cursor-pointer transition-all flex-row shadow-md items-center ${theme === 'light' ? 'bg-amber-100' : 'bg-black text-white'}`}>
+    <div ref={todayCardRef} className={`w-full rounded-full h-32 cursor-pointer transition-all flex-row shadow-md items-center ${theme === 'light' ? 'bg-amber-100' : 'bg-black text-white'}`}>
       <div className="flex justify-around items-center m-3">
         <img className="md:w-30 z-0 relative w-30 md:h-32 h-full rounded-full" src={slika ?? ''} alt="" />
       <div className="flex-row m-4">
