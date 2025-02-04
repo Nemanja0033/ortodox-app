@@ -14,7 +14,11 @@ const Hero = () => {
   const { language } = useLanguage();
   const { theme } = useTheme();
   const [loading, setLoading] = useState(true);
-  console.log(currentDate, data)
+
+  let currentMonthName = new Intl.DateTimeFormat("sr-RS", { month: "long" }).format(new Date());
+  let today = new Date();
+  let dayOfMonth = today.toLocaleDateString("sr-RS", { day: "numeric" });
+
 
   useEffect(() => {
     axios.get('http://localhost:3000/calendar')
@@ -31,8 +35,8 @@ const Hero = () => {
 
   return (
     <div className="flex justify-center">
-      <div  className="md:w-[700px] h-96 w-full mt-12 flex-row place-self-center">
-      <h1 className="text-2xl md:text-start text-center text-black">{language === 'СР' ? 'Данас је' : 'Danas je'} {data?.map((d, index) => (<span key={index}>{d.datum}</span>))}</h1>
+      <div  className="md:w-[700px] h-96 w-full md:mt-20 mt-12 flex-row place-self-center">
+      <h1 className={`text-2xl md:text-start text-center font-bold ${theme === 'light' ? 'text-black' : 'text-white'}`}>{language === 'СР' ? 'Данас је' : 'Danas je'} {dayOfMonth}. {currentMonthName}</h1>
           <div>
             {data?.map((d,index) => (
               <TodayCard key={index}
@@ -44,8 +48,8 @@ const Hero = () => {
             ))}
           </div>
 
-          <div className="mt-12 mb-12">
-            <h1 className={`${theme === 'light' ? 'text-black' : 'text-white'} text-2xl mb-3`}>{language === 'СР' ? 'Календар ѕа месец дана' : 'Kalendar za mesec dana' }</h1>
+          <div className="md:mt-24 mt-12 mb-12">
+            <h1 className={`${theme === 'light' ? 'text-black' : 'text-white'} font-bold md:text-start text-center text-2xl mb-3`}>{language === 'СР' ? 'Календар ѕа месец дана' : 'Kalendar za mesec dana' }</h1>
             <HeroCalendar data={calendarData} loading={loading}/>
           </div>
     </div>
