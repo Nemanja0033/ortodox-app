@@ -13,7 +13,7 @@ const Navbar = () => {
     
     if(isOpen){
         return(
-            <div className={`w-full z-10 absolute top-0 h-screen flex justify-center items-start text-2xl ${theme === 'light' ? 'bg-amber-100' : 'bg-black text-white'}`}>
+            <div className={`w-full z-50 absolute top-0 h-screen flex justify-center items-start text-2xl ${theme === 'light' ? 'bg-amber-100' : 'bg-black text-white'}`}>
                 <div className="flex-row mt-32 place-content-center">
                     <button className="cursor-pointer" onClick={() => setIsOpen(!isOpen)}><X /></button>
                     <b className="text-3xl flex items-center">{language === 'СР' ? 'Православни Календар' : 'Pravoslavni Kalendar'}☦️</b >
@@ -45,7 +45,7 @@ const Navbar = () => {
                     {language === 'СР' ? 'Календар за целу годину' : 'Kalendar za celu godinu'} <Calendar size={16} />
                 </Link>
                 {isOpenMonths && (
-                    <div className={`${theme === 'light' ? 'bg-amber-100' : 'bg-black text-white'} absolute left-0 w-44 rounded-xl shadow-lg p-2`}>
+                    <div  className={`${theme === 'light' ? 'bg-amber-100' : 'bg-black text-white'} z-50 absolute left-0 w-44 rounded-xl shadow-lg p-2`}>
                         {months.map((m, index) => (
                             <Link key={index} to={`/kalendar/${m}`} className="block px-4 py-2 hover:bg-amber-200 rounded">
                                 {m} 2025
