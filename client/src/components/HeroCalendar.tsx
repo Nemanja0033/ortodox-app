@@ -57,9 +57,9 @@ const HeroCalendar = () => {
     <div className={`flex-row w-full h-auto rounded-3xl ${theme === 'light' ? ' bg-amber-100/40' : 'bg-black/40'}`}>
         <nav className={`w-full h-12 items-center ${theme === 'light' ? 'bg-amber-100' : 'bg-black text-white'} rounded-full shadow-md flex justify-between mb-2`}>
             <span className="font-bold text-xl ml-10">{month}</span>
-            <div className="flex md:gap-2 gap-0 mr-10 items-center">
-              <label className={`${theme === 'light' ? 'text-black' : 'text-white'} font-bold`} htmlFor="dropdown">{language === 'SR' ? 'Sortiraj Prema:' : 'Сортирај Према:'}</label>
-              <select onChange={(e) => handleFilter(e.target.value)} name="dropdown">
+            <div className="flex md:gap-2 gap-1 mr-10 items-center">
+              <label className={`${theme === 'light' ? 'text-black' : 'text-white'} font-bold`} htmlFor="dropdown">{language === 'SR' ? 'Sortiraj' : 'Сортирај'}</label>
+              <select className={`${theme === 'light' ? 'bg-amber-100 border border-amber-200' : 'bg-black border-amber-200 border'} rounded-2xl text-center`} onChange={(e) => handleFilter(e.target.value)} name="dropdown">
                 <option>{language === 'SR' ? 'Crveno Slovo/Praznik' : 'Црвено Слово/Празник'}</option>
                 <option>{language === 'SR' ? 'Dani Posta' : 'Дани Поста'}</option>
                 <option>{language === 'SR' ? 'Nedelja' : 'Недеља'}</option>
