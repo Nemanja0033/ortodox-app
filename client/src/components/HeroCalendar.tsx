@@ -4,6 +4,7 @@ import { useCurrentMonth } from "../context/CurrentMonthContext";
 import { useLanguage } from "../context/LanguageContext";
 import { useTheme } from "../context/ThemeContext";
 import axios from "axios";
+import { RefreshCcw } from "lucide-react";
 
 const HeroCalendar = () => {
   const [data, setData] = useState<any>()
@@ -37,6 +38,10 @@ const HeroCalendar = () => {
     console.log(fastingDays)
   }
 
+  const resetFilters = () => {
+    setCalendarData(data);
+  }
+
   if(loading || calendarData.length == 0){
     return(
       <p className="animate-bounce text-2xl text-center">Учитавање података. . . Молимо вас освежите страницу</p>
@@ -45,11 +50,12 @@ const HeroCalendar = () => {
   
   return (
     <div className={`flex-row w-full h-auto rounded-3xl ${theme === 'light' ? ' bg-amber-100/40' : 'bg-black/40'}`}>
-        <nav className={`w-full h-12 items-center ${theme === 'light' ? 'bg-amber-100' : 'bg-black text-white'} rounded-full shadow-md flex justify-around mb-2`}>
-            <span className="font-bold text-xl">{month}</span>
-            <div className="flex gap-2">
-              <button onClick={showHolidays} className="bg-amber-300 rounded-full text-black w-auto shadow-md p-1 cursor-pointer hover:opacity-65 transition-all">{language === 'СР' ? 'Црвено Слово/Празник' : 'Crveno Slovo/Praznik'}</button>
-              <button onClick={showFastingDays} className="bg-amber-300 rounded-full text-black w-auto shadow-md p-1 cursor-pointer hover:opacity-65 transition-all">{language === 'СР' ? 'Дани Поста' : 'Dani Posta'}</button>
+        <nav className={`w-full h-12 items-center ${theme === 'light' ? 'bg-amber-100' : 'bg-black text-white'} rounded-full shadow-md flex justify-between mb-2`}>
+            <span className="font-bold text-xl ml-10">{month}</span>
+            <div className="flex md:gap-2 gap-0 mr-10">
+              <button onClick={showHolidays} className="bg-amber-200 rounded-full text-black w-auto shadow-md md:scale-100 scale-90 p-1 cursor-pointer hover:opacity-65 transition-all">{language === 'СР' ? 'Црвено Слово/Празник' : 'Crveno Slovo/Praznik'}</button>
+              <button onClick={showFastingDays} className="bg-amber-200 rounded-full text-black w-auto shadow-md p-1 md:scale-90 scale-75 cursor-pointer hover:opacity-65 transition-all">{language === 'СР' ? 'Дани Поста' : 'Dani Posta'}</button>
+              <button onClick={resetFilters} className="bg-amber-200 rounded-full text-black w-auto shadow-md p-1 md:scale-90 scale-75 cursor-pointer hover:opacity-65 transition-all"><RefreshCcw /></button>
             </div>
         </nav>
 
