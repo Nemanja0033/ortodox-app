@@ -8,7 +8,7 @@
 *-smooth UI-*
 *-resposivnes for every device-*
 
-#Tech-stack
+##Tech-stack
 **Frontend**
 *-React.js-*
 *axios-*
