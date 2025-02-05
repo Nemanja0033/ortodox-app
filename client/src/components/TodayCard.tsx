@@ -2,7 +2,7 @@ import { useTheme } from "../context/ThemeContext"
 import { TodayCardComponnetType } from "../types/TodayCardComponentType"
 
 
-const TodayCard = ({praznik, post, crveno_slovo, slika}: TodayCardComponnetType) => {
+const TodayCard = ({praznik, post, crveno_slovo, slika, dan}: TodayCardComponnetType) => {
 
   const {theme} = useTheme();
   
@@ -13,7 +13,7 @@ const TodayCard = ({praznik, post, crveno_slovo, slika}: TodayCardComponnetType)
       <div className="flex-row m-4">
         <b className={`${crveno_slovo === 'Да' ? 'text-red-600' : 'text-black'} ${theme === 'light' ? 'text-black' : 'text-white'} md:text-3xl text-xl`}>{praznik}</b>
         <br />
-        <span className="md:text-2xl text-md">{post}</span>
+        <span className="md:text-2xl text-md"><span className="font-bold">{dan}</span> / {post}</span>
       </div>
       </div>
     </div>

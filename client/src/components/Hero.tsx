@@ -40,6 +40,7 @@ const Hero = () => {
                          praznik={d.praznik} 
                          post={d.post} 
                          crveno_slovo={d.crveno_slovo} 
+                         dan={d.dan}
                         />
             ))}
           </div>
