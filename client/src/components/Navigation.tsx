@@ -11,23 +11,47 @@ const Navbar = () => {
     const {language, toggleLanguage} = useLanguage();
     const {theme, toggleTheme} = useTheme();
     
-    if(isOpen){
-        return(
-            <div className={`w-full z-50 absolute top-0 h-screen flex justify-center items-start text-2xl ${theme === 'light' ? 'bg-amber-100' : 'bg-black text-white'}`}>
-                <div className="flex-row mt-32 place-content-center">
-                    <button className="cursor-pointer" onClick={() => setIsOpen(!isOpen)}><X /></button>
-                    <b className="text-3xl flex items-center">{language === 'СР' ? 'Православни Календар' : 'Pravoslavni Kalendar'}☦️</b >
-                    <Link className="flex items-center gap-1 hover:text-amber-500" to={''} onClick={() => setIsOpenMonths(!isOpenMonths)}>{language === 'СР' ? 'Календар за целу годину' : 'Kalendar za celu godinu'} <Calendar size={16} /></Link>
-                    <Link className="hover:text-amber-500" to={'/post'}>{language === 'СР' ? 'Постови' : 'Postovi'}</Link>
-                    <br />
-                    <Link className="border-r pr-3 hover:text-amber-500" to={'/o-aplikaciji'}>{language === 'СР' ? 'О апликацији' : 'O aplikaciji'}</Link>
-                    <br />
-                    <button onClick={toggleLanguage} className="cursor-pointer hover:text-amber-500 flex gap-1 items-center"><Languages size={20} />SR/СР</button>
-                    <button onClick={toggleTheme} className="cursor-pointer hover:text-amber-500"><SunMoon /></button>
+    if (isOpen) {
+        return (
+            <div className={`w-full z-50 absolute top-0 left-0 h-screen flex justify-center items-center text-2xl ${theme === 'light' ? 'bg-amber-100' : 'bg-black text-white'}`}>
+                <div className="flex flex-col gap-4 text-center">
+                    <button className="self-end p-2 cursor-pointer" onClick={() => setIsOpen(false)}>
+                        <X size={30} />
+                    </button>
+    
+                    <b className="text-3xl flex items-center justify-center">
+                        {language === 'СР' ? 'Православни Календар' : 'Pravoslavni Kalendar'} ☦️
+                    </b>
+    
+                    <Link className="flex items-center justify-center gap-1 hover:text-amber-500" 
+                        to={''} 
+                        onClick={() => setIsOpenMonths(!isOpenMonths)}
+                    >
+                        {language === 'СР' ? 'Календар за целу годину' : 'Kalendar za celu godinu'} 
+                        <Calendar size={20} />
+                    </Link>
+    
+                    <Link className="hover:text-amber-500" to={'/post'}>
+                        {language === 'СР' ? 'Постови' : 'Postovi'}
+                    </Link>
+    
+                    <Link className="hover:text-amber-500" to={'/o-aplikaciji'}>
+                        {language === 'СР' ? 'О апликацији' : 'O aplikaciji'}
+                    </Link>
+    
+                    <div className="flex justify-center gap-4 mt-4">
+                        <button onClick={toggleLanguage} className="cursor-pointer hover:text-amber-500 flex gap-1 items-center">
+                            <Languages size={20} /> SR/СР
+                        </button>
+                        <button onClick={toggleTheme} className="cursor-pointer hover:text-amber-500">
+                            <SunMoon size={20} />
+                        </button>
+                    </div>
                 </div>
             </div>
-        )
+        );
     }
+    
 
   return (
     <div className="flex justify-center items-center">

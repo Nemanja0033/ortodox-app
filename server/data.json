@@ -37,7 +37,7 @@
         { "mesec": "Фебруар", "datum": "2025-02-02", "slika": "http://arhiva.spc.rs/files/u5/2011/4/prepodobni-jevtimije-veliki.jpg", "praznik": "Преподобни Јевтимије Велики", "post": "мрс", "crveno_slovo": "Да" },
         { "mesec": "Фебруар", "datum": "2025-02-03", "praznik": "Преподобни Максим Исповедник; Свети мученик Неофит", "post": "мрс", "crveno_slovo": "не" },
         { "mesec": "Фебруар", "datum": "2025-02-04", "slika": "https://xdn.tf.rs/2025/02/03/prepodobnomucenik-anastasije-persijski-i-sveti-apostol-timotej-830x553.jpg?ver=182337", "praznik": "Свети апостол Тимотеј; Преподобни мученик Анастасије", "post": "мрс", "crveno_slovo": "не" },
-        { "mesec": "Фебруар", "datum": "2025-02-05", "praznik": "Свети свештеномученик Климент Анкирски", "post": "Вода", "crveno_slovo": "не" },
+        { "mesec": "Фебруар", "datum": "2025-02-05", "slika": "https://svetigora.com/wp-content/uploads/2024/02/Sveti-svestenomucenik-Kliment-Ankirski-480x569.jpg", "praznik": "Свети свештеномученик Климент Анкирски", "post": "Вода", "crveno_slovo": "не" },
         { "mesec": "Фебруар", "datum": "2025-02-06", "praznik": "Преподобна Ксенија Петроградска; Преподобна Ксенија Римљанка; Свети мученик Вавила", "post": "мрс", "crveno_slovo": "не" },
         { "mesec": "Фебруар", "datum": "2025-02-07", "praznik": "Свети Григорије Богослов; Преподобни Публије", "post": "Уље", "crveno_slovo": "не" },
         { "mesec": "Фебруар", "datum": "2025-02-08", "praznik": "Преподобни Ксенофонт и Марија", "post": "мрс", "crveno_slovo": "не" },
@@ -128,7 +128,7 @@
       { "datum": "2025-30-04", "praznik": "", "post": "", "crveno_slovo": "" },
 
       { "datum": "2025-01-05", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-02-05", "praznik": "", "post": "", "crveno_slovo": "" },
+      { "datum": "2025-05-02", "praznik": "", "post": "", "crveno_slovo": "" },
       { "datum": "2025-03-05", "praznik": "", "post": "", "crveno_slovo": "" },
       { "datum": "2025-04-05", "praznik": "", "post": "", "crveno_slovo": "" },
       { "datum": "2025-05-05", "praznik": "", "post": "", "crveno_slovo": "" },
