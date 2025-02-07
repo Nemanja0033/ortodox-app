@@ -7,9 +7,9 @@ const TodayCard = ({praznik, post, crveno_slovo, slika, dan}: TodayCardComponnet
   const {theme} = useTheme();
   
   return (
-    <div className={`w-full rounded-full h-32 cursor-pointer transition-all flex-row shadow-md items-center ${theme === 'light' ? 'bg-amber-100' : 'bg-black text-white'}`}>
+    <div className={`w-full rounded-full h-auto cursor-pointer transition-all flex-row shadow-md items-center ${theme === 'light' ? 'bg-amber-100' : 'bg-black text-white'}`}>
       <div className="flex justify-around items-center m-3">
-        <img className="md:w-30 z-0 relative w-30 md:h-fit h-fit rounded-full" src={slika ?? ''} alt="" />
+        <img className="md:w-30 z-0 relative w-30 rounded-full" src={slika ?? ''} alt="" />
       <div className="flex-row m-4">
         <b className={`${crveno_slovo === 'Да' ? 'text-red-600' : 'text-black'} ${theme === 'light' ? 'text-black' : 'text-white'} md:text-3xl text-xl`}>{praznik}</b>
         <br />

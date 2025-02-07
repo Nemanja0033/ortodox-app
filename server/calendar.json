@@ -35,10 +35,10 @@
       
         { "mesec": "Фебруар", "datum": "2025-02-01", "dan": "Субота", "slika": "https://svetigora.com/wp-content/uploads/2022/02/prepodobni-makarije-egipatski--480x641.jpg", "praznik": "Преподобни Макарије Египатски; Свети Марко Ефески", "post": "мрс", "crveno_slovo": "не" },
         { "mesec": "Фебруар", "datum": "2025-02-02", "dan": "Недеља", "slika": "http://arhiva.spc.rs/files/u5/2011/4/prepodobni-jevtimije-veliki.jpg", "praznik": "Преподобни Јевтимије Велики", "post": "мрс", "crveno_slovo": "Да" },
-        { "mesec": "Фебруар", "datum": "2025-02-03", "dan": "Понедељак", "praznik": "Преподобни Максим Исповедник; Свети мученик Неофит", "post": "мрс", "crveno_slovo": "не" },
+        { "mesec": "Фебруар", "datum": "2025-02-03", "dan": "Понедељак", "slika": "https://prijateljboziji.com/wp-content/uploads/2025/02/sveti-mucenik-neofit.jpg", "praznik": "Преподобни Максим Исповедник; Свети мученик Неофит", "post": "мрс", "crveno_slovo": "не" },
         { "mesec": "Фебруар", "datum": "2025-02-04", "dan": "Уторак", "slika": "https://xdn.tf.rs/2025/02/03/prepodobnomucenik-anastasije-persijski-i-sveti-apostol-timotej-830x553.jpg?ver=182337", "praznik": "Свети апостол Тимотеј; Преподобни мученик Анастасије", "post": "мрс", "crveno_slovo": "не" },
         { "mesec": "Фебруар", "datum": "2025-02-05", "dan": "Среда", "slika": "https://svetigora.com/wp-content/uploads/2024/02/Sveti-svestenomucenik-Kliment-Ankirski-480x569.jpg", "praznik": "Свети свештеномученик Климент Анкирски", "post": "Вода", "crveno_slovo": "не" },
-        { "mesec": "Фебруар", "datum": "2025-02-06", "dan": "Четвртак", "praznik": "Преподобна Ксенија Петроградска; Преподобна Ксенија Римљанка; Свети мученик Вавила", "post": "мрс", "crveno_slovo": "не" },
+        { "mesec": "Фебруар", "datum": "2025-02-06", "dan": "Четвртак", "slika": "https://svetigora.com/wp-content/uploads/2019/02/Prepodobna-Ksenija-Rimljanka-480x667.jpg", "praznik": "Преподобна Ксенија Петроградска; Преподобна Ксенија Римљанка; Свети мученик Вавила", "post": "мрс", "crveno_slovo": "не" },
         { "mesec": "Фебруар", "datum": "2025-02-07", "dan": "Петак", "praznik": "Свети Григорије Богослов; Преподобни Публије", "post": "Уље", "crveno_slovo": "не" },
         { "mesec": "Фебруар", "datum": "2025-02-08", "dan": "Субота", "praznik": "Преподобни Ксенофонт и Марија", "post": "мрс", "crveno_slovo": "не" },
         { "mesec": "Фебруар", "datum": "2025-02-09", "dan": "Недеља", "praznik": "Пренос моштију светог Јована Златоуста", "post": "мрс", "crveno_slovo": "Да" },
@@ -180,71 +180,228 @@
       { "datum": "2025-30-03", "praznik": "Свети Алексије, Човек Божији", "post": "Уље", "crveno_slovo": "Да" },
       { "datum": "2025-31-03", "praznik": "Свети Кирил Јерусалимски", "post": "Вода", "crveno_slovo": "не" },
 
-      { "datum": "2025-01-04", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-04-02", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-03-04", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-04-04", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-05-04", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-06-04", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-07-04", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-08-04", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-09-04", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-10-04", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-11-04", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-12-04", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-13-04", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-14-04", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-15-04", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-16-04", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-17-04", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-18-04", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-19-04", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-20-04", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-21-04", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-22-04", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-23-04", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-24-04", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-25-04", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-26-04", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-27-04", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-28-04", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-29-04", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-30-04", "praznik": "", "post": "", "crveno_slovo": "" },
+      { "datum": "2025-04-01", "praznik": "Sveti mučenici Hrizant, Darija i drugi; Prepodobni Simon Dajbabski", "post": "post", "crveno_slovo": "" },
+      { "datum": "2025-04-02", "praznik": "Prepodobni Oci po ubijani u manastiru Svetog Save Osvećenog (Prvo bdenije)", "post": "post", "crveno_slovo": "" },
+      { "datum": "2025-04-03", "praznik": "Prepodobni Jakov Ispovednik", "post": "post", "crveno_slovo": "" },
+      { "datum": "2025-04-04", "praznik": "Sveti Sv. Mučenik Vasilije Ankirski (Drugo bdenije)", "post": "post", "crveno_slovo": "" },
+      { "datum": "2025-04-05", "praznik": "Prepodobnomučenik Nikon i drugi", "post": "post", "crveno_slovo": "" },
+      { "datum": "2025-04-06", "praznik": "Prepodobni Zaharije (Pretprazništvo Blagovesti)", "post": "post", "crveno_slovo": "" },
+      { "datum": "2025-04-07", "praznik": "+++ Blagovesti", "post": "post", "crveno_slovo": "" },
+      { "datum": "2025-04-08", "praznik": "Sabor Svetog Arhangela Gavrila (Odaniije Blagovesti)", "post": "post", "crveno_slovo": "" },
+      { "datum": "2025-04-09", "praznik": "Prepodobna Matrona Solunska", "post": "post", "crveno_slovo": "" },
+      { "datum": "2025-04-10", "praznik": "Prepodobni Ilarion Ispovednik", "post": "post", "crveno_slovo": "" },
+      { "datum": "2025-04-11", "praznik": "Prepodobni Marko Areutski", "post": "post", "crveno_slovo": "" },
+      { "datum": "2025-04-12", "praznik": "Prepodobni Jovan Lestvičnik; Lazareva Subota - Vrbica", "post": "post", "crveno_slovo": "" },
+      { "datum": "2025-04-13", "praznik": "+++ Ulazak Gospoda Isusa Hrista u Jerusalim - Cveti", "post": "post", "crveno_slovo": "" },
+      { "datum": "2025-04-14", "praznik": "Prepodobna Marija Egipćanka", "post": "post", "crveno_slovo": "" },
+      { "datum": "2025-04-15", "praznik": "Prepodobni Tit Čudotvorac", "post": "post", "crveno_slovo": "" },
+      { "datum": "2025-04-16", "praznik": "Prepodobni Nikita Ispovednik", "post": "post", "crveno_slovo": "" },
+      { "datum": "2025-04-17", "praznik": "Veliki Četvrtak (Veliko bdenije)", "post": "post", "crveno_slovo": "" },
+      { "datum": "2025-04-18", "praznik": "+++ Veliki Petak - Raspeće Hristovo", "post": "post", "crveno_slovo": "" },
+      { "datum": "2025-04-19", "praznik": "+++ Velika Subota", "post": "post", "crveno_slovo": "" },
+      { "datum": "2025-04-20", "praznik": "+++ Vaskrsenje Gospoda Isusa Hrista - Vaskrs", "post": "", "crveno_slovo": "" },
+      { "datum": "2025-04-21", "praznik": "+++ Vaskrsni Ponedeljak", "post": "", "crveno_slovo": "" },
+      { "datum": "2025-04-22", "praznik": "+++ Vaskrsni Utorak", "post": "", "crveno_slovo": "" },
+      { "datum": "2025-04-23", "praznik": "Sveti Mučenik Terentije", "post": "", "crveno_slovo": "" },
+      { "datum": "2025-04-24", "praznik": "Sveti Svestenomučenik Antipa", "post": "", "crveno_slovo": "" },
+      { "datum": "2025-04-25", "praznik": "Prepodobni Vasilije Ispovednik; Prepodobni Isak Sirin (Istočni Petak)", "post": "", "crveno_slovo": "" },
+      { "datum": "2025-04-26", "praznik": "Sveti Svestenomučenik Artemon Laodičijski", "post": "", "crveno_slovo": "" },
+      { "datum": "2025-04-27", "praznik": "Sveti Martin Ispovednik", "post": "", "crveno_slovo": "" },
+      { "datum": "2025-04-28", "praznik": "Sveti Apostoli Aristarh, Pud i Trofim (Pobusani Ponedeljak)", "post": "", "crveno_slovo": "" },
+      { "datum": "2025-04-29", "praznik": "Svete Mučenice Agapija, Hionija i Irina", "post": "", "crveno_slovo": "" },
+      { "datum": "2025-04-30", "praznik": "Prepodobni Simeon Persijski", "post": "post", "crveno_slovo": "" },
+      
 
-      { "datum": "2025-01-05", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-05-02", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-03-05", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-04-05", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-05-05", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-06-05", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-07-05", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-08-05", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-09-05", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-10-05", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-11-05", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-12-05", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-13-05", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-14-05", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-15-05", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-16-05", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-17-05", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-18-05", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-19-05", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-20-05", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-21-05", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-22-05", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-23-05", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-24-05", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-25-05", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-26-05", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-27-05", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-28-05", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-29-05", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-30-05", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-31-05", "praznik": "", "post": "", "crveno_slovo": "" },
+      {
+        "datum": "2025-05-01",
+        "praznik": "Преп. Јован ученик Св. Григорија Декаполита; Св. муч. Јован Нови Јањински",
+        "post": "",
+        "crveno_slovo": ""
+      },
+      {
+        "datum": "2025-05-02",
+        "praznik": "Преподобни Јован Ветхопештерник",
+        "post": "пост",
+        "crveno_slovo": ""
+      },
+      {
+        "datum": "2025-05-03",
+        "praznik": "Преп. Теодор Трихина; Преп. Јоасаф Српски; Свети Николај Жички",
+        "post": "",
+        "crveno_slovo": ""
+      },
+      {
+        "datum": "2025-05-04",
+        "praznik": "Свети Свештеномученик Јануарије",
+        "post": "",
+        "crveno_slovo": ""
+      },
+      {
+        "datum": "2005-05-25",
+        "praznik": "Пр. Теодор Сикеот; Св. Свештеномученик Платон Бањалучки",
+        "post": "",
+        "crveno_slovo": ""
+      },
+      {
+        "datum": "2025-05-06",
+        "praznik": "+++ СВЕТИ ВЕЛИКОМУЧЕНИК ГЕОРГИЈЕ - ЂУРЂЕВДАН",
+        "post": "",
+        "crveno_slovo": "+++"
+      },
+      {
+        "datum": "2025-05-07",
+        "praznik": "Св. мученик Сава Стратилат; Св. Сава Ердељски; Св. Свештеномуч. Бранко",
+        "post": "пост",
+        "crveno_slovo": ""
+      },
+      {
+        "datum": "2025-05-08",
+        "praznik": "Свети апостол и јеванђелист Марко - Марковдан",
+        "post": "",
+        "crveno_slovo": ""
+      },
+      {
+        "datum": "2025-05-09",
+        "praznik": "Свети Свештеномученик Василије Амасијски",
+        "post": "пост",
+        "crveno_slovo": ""
+      },
+      {
+        "datum": "2025-05-10",
+        "praznik": "Спаљивање моштију Светог Саве на Врачару",
+        "post": "",
+        "crveno_slovo": ""
+      },
+      {
+        "datum": "2025-05-11",
+        "praznik": "Свети апостоли Јасон и Сосипатр",
+        "post": "",
+        "crveno_slovo": ""
+      },
+      {
+        "datum": "2025-05-12",
+        "praznik": "+++ СВЕТИ ВАСИЛИЈЕ ОСТРОШКИ ЧУДОТВОРАЦ; Св. Муч. Василије пекар из Пећи",
+        "post": "",
+        "crveno_slovo": "+++"
+      },
+      {
+        "datum": "2025-05-13",
+        "praznik": "Св. апостол Јаков Заведејев",
+        "post": "",
+        "crveno_slovo": ""
+      },
+      {
+        "datum": "2025-05-14",
+        "praznik": "Свети пророк Јеремија (Преполовљење)",
+        "post": "пост",
+        "crveno_slovo": ""
+      },
+      {
+        "datum": "2025-05-15",
+        "praznik": "Свети Атанасије Велики; Свети Михаил",
+        "post": "",
+        "crveno_slovo": ""
+      },
+      {
+        "datum": "2025-05-16",
+        "praznik": "Свети мученици Тимотеј и Мавра",
+        "post": "пост",
+        "crveno_slovo": ""
+      },
+      {
+        "datum": "2025-05-17",
+        "praznik": "Света мученица Пелагија Тарсијска",
+        "post": "",
+        "crveno_slovo": ""
+      },
+      {
+        "datum": "2025-05-18",
+        "praznik": "Света великомученица Ирина",
+        "post": "",
+        "crveno_slovo": ""
+      },
+      {
+        "datum": "2025-05-19",
+        "praznik": "Праведни Јов; Пренос моштију Светог Саве",
+        "post": "",
+        "crveno_slovo": ""
+      },
+      {
+        "datum": "2025-05-20",
+        "praznik": "Појава Часног Крста у Јерусалиму",
+        "post": "",
+        "crveno_slovo": ""
+      },
+      {
+        "datum": "2025-05-21",
+        "praznik": "Свети апостол и јеванђелист Јован Богослов (Оданије Преполовљења)",
+        "post": "пост",
+        "crveno_slovo": ""
+      },
+      {
+        "datum": "2025-05-22",
+        "praznik": "Пренос моштију Светог оца Николаја Пећка икона Пресвете Богородице",
+        "post": "",
+        "crveno_slovo": ""
+      },
+      {
+        "datum": "2025-05-23",
+        "praznik": "Свети апостол Симон Зилот; Преподобна Исидора",
+        "post": "пост",
+        "crveno_slovo": ""
+      },
+      {
+        "datum": "2025-05-24",
+        "praznik": "+++ СВЕТИ ЋИРИЛО И МЕТОДИЈЕ",
+        "post": "",
+        "crveno_slovo": "+++"
+      },
+      {
+        "datum": "2025-05-25",
+        "praznik": "Свети Епифаније; Свети Герман Цариградски; Свети Никодим српски",
+        "post": "",
+        "crveno_slovo": ""
+      },
+      {
+        "datum": "2025-05-26",
+        "praznik": "Света мученица Гликерија",
+        "post": "",
+        "crveno_slovo": ""
+      },
+      {
+        "datum": "2025-05-27",
+        "praznik": "Свети мученик Исидор; Свети мученик Максим",
+        "post": "",
+        "crveno_slovo": ""
+      },
+      {
+        "datum": "2025-05-28",
+        "praznik": "Преподобни Пахомије Велики; Свети Ахилије (Оданије Васкрса)",
+        "post": "пост",
+        "crveno_slovo": ""
+      },
+      {
+        "datum": "2025-05-29",
+        "praznik": "+++ВАЗНЕСЕЊЕ ГОСПОДЊЕ - СПАСОВДАН",
+        "post": "",
+        "crveno_slovo": "+++"
+      },
+      {
+        "datum": "2025-05-30",
+        "praznik": "Свети апостол Андроник и Јунија",
+        "post": "пост",
+        "crveno_slovo": ""
+      },
+      {
+        "datum": "2025-05-31",
+        "praznik": "Свети мученик Теодор Анкирски",
+        "post": "",
+        "crveno_slovo": ""
+      },
+      
 
       { "datum": "2025-01-06", "praznik": "", "post": "", "crveno_slovo": "" },
-      { "datum": "2025-02-06", "praznik": "", "post": "", "crveno_slovo": "" },
+      { "datum": "2025-06-02", "praznik": "", "post": "", "crveno_slovo": "" },
       { "datum": "2025-03-06", "praznik": "", "post": "", "crveno_slovo": "" },
       { "datum": "2025-04-06", "praznik": "", "post": "", "crveno_slovo": "" },
       { "datum": "2025-05-06", "praznik": "", "post": "", "crveno_slovo": "" },
