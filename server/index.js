@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import fs from "fs";
+import { error } from "console";
 
 const app = express();
 
@@ -14,6 +15,15 @@ app.get('/calendar', (req, res) => {
         res.json(JSON.parse(data));
     })
 });
+
+app.get('/quotes', (req, res) => {
+    fs.readFile('quotes.json', 'utf8', (err, data) => {
+        if(err){
+            return res.status(500).json( { error: 'Problem pri citanju fajla!'});
+        }
+        res.json(JSON.parse(data));
+    })
+})
 
 const PORT = 3000;
 
