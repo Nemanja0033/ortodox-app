@@ -11,6 +11,7 @@ import Quote from "./Quote";
 const Hero = () => {
   const [data, setData] = useState<any[]| null>(null);
   const [quote, setQuote] = useState<any>(null);
+  const [currentQuote, setCurrentQoute] = useState<any>();
   const { language } = useLanguage();
   const { theme } = useTheme();
 
@@ -35,11 +36,17 @@ const Hero = () => {
   useEffect(() => {
     axios.get('http://localhost:3000/quotes')
     .then((response) => {
-      setQuote(response.data.quotes[randomNumber]);
+      setQuote(response.data.quotes);
+      setCurrentQoute(response.data.quotes[randomNumber]);
+      console.log(currentQuote);
     },).catch((err) => {
       console.log(err);
     });
   }, []);
+
+  const refreshQuote = () => {
+    setCurrentQoute(quote?.[randomNumber]);
+  }
 
   return (
     <div className="flex justify-center">
@@ -55,9 +62,11 @@ const Hero = () => {
                         />
             ))}
 
-        <div className="w-full flex justify-center items-center md:mt-20 mt-12">
-          <Quote author={quote?.author} 
-                 quote={language === 'SR' ? quote?.text_lat : quote?.text_cyr} 
+        <h1 className="md:mt-20 mt-12 mb-3 font-bold text-xl">{language === 'SR' ? 'Pouke Dana' : 'Поуке Дана  '}</h1>
+        <div className="w-full flex justify-center items-center">
+          <Quote author={currentQuote?.author} 
+                 quote={language === 'SR' ? currentQuote?.text_lat : currentQuote?.text_cyr} 
+                 onclick={refreshQuote}
                  />
         </div>
 

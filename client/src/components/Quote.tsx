@@ -1,17 +1,16 @@
-import { useLanguage } from "../context/LanguageContext";
+import { RefreshCcw } from "lucide-react";
 import { useTheme } from "../context/ThemeContext"
 import { QuoteComponentType } from "../types/QuoteComponentType"
 
-const Quote = ({quote, author}: QuoteComponentType) => {
+const Quote = ({quote, author, onclick}: QuoteComponentType) => {
     
     const { theme } = useTheme();
-    const { language } = useLanguage();
-
   return (
-    <div className={`w-full ${theme === 'light' ? 'bg-amber-100' : 'bg-black text-white'} h-auto rounded-full text-center flex justify-center`}>
+    <div className={`w-full ${theme === 'light' ? 'bg-amber-100/60' : 'bg-black text-white'} h-auto rounded-full text-center flex justify-center`}>
         <div className="mt-3 mb-3">
-            <i className="font-semibold md:text-xl">"{quote}"</i>
+            <i className="font-semibold md:text-xl mr-3 ml-3">"{quote}"</i>
             <p>-{author}</p>
+            <button onClick={onclick} className="cursor-pointer mt-3 hover:animate-spin"><RefreshCcw /></button>
         </div>
     </div>
   )
