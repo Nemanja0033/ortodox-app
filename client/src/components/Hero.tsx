@@ -50,7 +50,7 @@ const Hero = () => {
 
   return (
     <section ref={heroSectionRef} className="md:flex gap-5 flex-row justify-center">
-      <div className="mt-12 md:ml-10">
+      <div className="mt-12 md:ml-10 md:w-1/2">
         <h1 className={`text-2xl md:text-start text-center font-bold ${theme === 'light' ? 'text-black' : 'text-white'}`}>{language === 'СР' ? 'Данас је' : 'Danas je'} {dayOfMonth}. {currentMonthName}</h1>
               {data?.map((d,index) => (
                 <TodayCard key={index}
@@ -69,7 +69,7 @@ const Hero = () => {
                   />
       </div>
 
-      <div className="flex-row mt-12 mr-5 justify-center">
+      <div className="flex-row mt-12 mr-5 justify-center md:w-1/2">
         <h1 className={`${theme === 'light' ? 'text-black' : 'text-white'} font-bold md:text-start text-center text-2xl mb-3`}>{language === 'СР' ? 'Календар ѕа месец дана' : 'Kalendar za mesec dana' }</h1>
         <HeroCalendar/>
       </div>
