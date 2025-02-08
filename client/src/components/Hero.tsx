@@ -20,8 +20,8 @@ const Hero = () => {
   let dayOfMonth = today.toLocaleDateString("sr-RS", { day: "numeric" });
   let randomNumber = Math.floor(Math.random() * 24);
 
-  const todayCardRef = useRef<HTMLDivElement | null>(null);
-  useAnim(todayCardRef, 50);
+  const heroSectionRef = useRef<HTMLDivElement | null>(null);
+  useAnim(heroSectionRef, 50);
 
   useEffect(() => {
     axios.get('http://localhost:3000/calendar')
@@ -49,33 +49,31 @@ const Hero = () => {
   }
 
   return (
-    <div className="flex justify-center">
-      <div ref={todayCardRef} className="md:w-[700px] h-96 w-full md:mt-20 mt-12 flex-row place-self-center">
-      <h1 className={`text-2xl md:text-start text-center font-bold ${theme === 'light' ? 'text-black' : 'text-white'}`}>{language === 'СР' ? 'Данас је' : 'Danas je'} {dayOfMonth}. {currentMonthName}</h1>
-            {data?.map((d,index) => (
-              <TodayCard key={index}
-                         slika={d.slika}
-                         praznik={d.praznik} 
-                         post={d.post} 
-                         crveno_slovo={d.crveno_slovo} 
-                         dan={d.dan}
-                        />
-            ))}
+    <section ref={heroSectionRef} className="md:flex gap-5 flex-row justify-center">
+      <div className="mt-12 md:ml-10">
+        <h1 className={`text-2xl md:text-start text-center font-bold ${theme === 'light' ? 'text-black' : 'text-white'}`}>{language === 'СР' ? 'Данас је' : 'Danas je'} {dayOfMonth}. {currentMonthName}</h1>
+              {data?.map((d,index) => (
+                <TodayCard key={index}
+                          slika={d.slika}
+                          praznik={d.praznik} 
+                          post={d.post} 
+                          crveno_slovo={d.crveno_slovo} 
+                          dan={d.dan}
+                          />
+              ))}
 
-        <h1 className="md:mt-20 mt-12 mb-3 font-bold text-xl">{language === 'SR' ? 'Pouke Dana' : 'Поуке Дана  '}</h1>
-        <div className="w-full flex justify-center items-center">
-          <Quote author={currentQuote?.author} 
-                 quote={language === 'SR' ? currentQuote?.text_lat : currentQuote?.text_cyr} 
-                 onclick={refreshQuote}
-                 />
-        </div>
+          <h1 className={`mb-3 font-bold text-xl ${theme === 'light' ? 'text-black' : 'text-white'}`}>{language === 'SR' ? 'Pouke Dana' : 'Поуке Дана  '}</h1>
+            <Quote author={currentQuote?.author} 
+                  quote={language === 'SR' ? currentQuote?.text_lat : currentQuote?.text_cyr} 
+                  onclick={refreshQuote}
+                  />
+      </div>
 
-          <div className="md:mt-24 mt-12 mb-12">
-            <h1 className={`${theme === 'light' ? 'text-black' : 'text-white'} font-bold md:text-start text-center text-2xl mb-3`}>{language === 'СР' ? 'Календар ѕа месец дана' : 'Kalendar za mesec dana' }</h1>
-            <HeroCalendar/>
-          </div>
-    </div>
-    </div>
+      <div className="flex-row mt-12 mr-5 justify-center">
+        <h1 className={`${theme === 'light' ? 'text-black' : 'text-white'} font-bold md:text-start text-center text-2xl mb-3`}>{language === 'СР' ? 'Календар ѕа месец дана' : 'Kalendar za mesec dana' }</h1>
+        <HeroCalendar/>
+      </div>
+    </section>
   )
 }
 
