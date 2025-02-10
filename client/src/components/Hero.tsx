@@ -69,7 +69,7 @@ const Hero = () => {
                   />
       </div>
 
-      <div className="flex-row mt-12 mr-5 justify-center md:w-1/2">
+      <div className="flex-row mt-12 md:mr-5 justify-center md:w-1/2">
         <h1 className={`${theme === 'light' ? 'text-black' : 'text-white'} font-bold md:text-start text-center text-2xl mb-3`}>{language === 'СР' ? 'Календар ѕа месец дана' : 'Kalendar za mesec dana' }</h1>
         <HeroCalendar/>
       </div>

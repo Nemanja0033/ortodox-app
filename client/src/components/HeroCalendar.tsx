@@ -62,7 +62,7 @@ const HeroCalendar = () => {
   }
   
   return (
-    <div className={`flex-row w-full h-auto rounded-3xl ${theme === 'light' ? ' bg-amber-100/40' : 'bg-black/40'}`}>
+    <div className={`flex-row w-full h-full rounded-3xl ${theme === 'light' ? ' bg-amber-100/40' : 'bg-black/40'}`}>
         <nav className={`w-full h-12 items-center ${theme === 'light' ? 'bg-amber-100' : 'bg-black text-white'} rounded-full shadow-md flex justify-between mb-2`}>
             <span className="font-bold text-xl ml-10">{month}</span>
             <div className="flex md:gap-2 gap-1 mr-10 items-center">
