@@ -12,7 +12,7 @@ const SingleDate = ({datum, praznik, post, crveno_slovo, key}: SingleDateProps) 
             <span className="font-bold">{datum}</span>
             <span className="font-bold">{post}</span>
         </div>
-        <h3 className={`${crveno_slovo === 'Да' ? 'text-red-500 font-bold' : ''}`}>{praznik}</h3>
+        <h3 className={`${crveno_slovo === 'Да' ? 'text-red-500 font-bold' : ''} md:text-md text-xl`}>{praznik}</h3>
     </div>
   )
 }

@@ -3,10 +3,12 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router"
 import SingleDate from "./SingleDate";
 import { DataType } from "../types/DataType";
+import { useTheme } from "../context/ThemeContext";
 
 const Calendar = () => {
     const month = useParams().id;
     const [calndarData, setCalendarData] = useState<any[]>([]);
+    const { theme } = useTheme();
 
     useEffect(() => {
         axios.get("http://localhost:3000/calendar")
@@ -18,7 +20,7 @@ const Calendar = () => {
         })
     })
   return (
-    <section className="grid md:grid-cols-7 grid-cols-1 gap-2">
+    <section className={`grid md:grid-cols-7 p-2 m-3 rounded-xl ${theme === 'light' ? 'bg-amber-100/60' : 'bg-black/80'} grid-cols-1 gap-2`}>
         {calndarData.map((d: DataType, index) => (
             <SingleDate key={index}
                         crveno_slovo={d.crveno_slovo}
