@@ -3,5 +3,5 @@ export type SingleDateProps = {
     crveno_slovo: string,
     datum: string,
     post: string,
-    key: number,
+    key: any,
 }
