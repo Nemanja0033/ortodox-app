@@ -23,6 +23,15 @@ app.get('/quotes', (req, res) => {
         }
         res.json(JSON.parse(data));
     })
+});
+
+app.get('/fasts', (req, res) => {
+    fs.readFile('postovi.json', 'utf8', (err, data) => {
+        if(err){
+            console.log(err);
+        }
+        res.json(JSON.parse(data));
+    })
 })
 
 const PORT = 3000;

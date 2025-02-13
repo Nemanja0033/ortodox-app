@@ -1,8 +1,8 @@
-import CalendarPage from "./pages/CalendarPage";
-import HomePage from "./pages/HomePage";
+import CalendarPage from "./pages/Calendar";
+import HomePage from "./pages/Index";
 import { BrowserRouter as Router, Route, Routes } from "react-router";
-import PostPage from "./pages/PostPage";
-import AboutPage from "./pages/AboutPage";
+import PostPage from "./pages/Fasts";
+import AboutPage from "./pages/About";
 import Navbar from "./components/Navigation";
 const App = () => {
 
