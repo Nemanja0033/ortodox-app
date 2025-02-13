@@ -1,6 +1,6 @@
-import { currentDate } from "../constants/currentDate";
-import { useTheme } from "../context/ThemeContext"
-import { SingleDateProps } from "../types/SingleDateComponentType"
+import { currentDate } from "../../constants/currentDate";
+import { useTheme } from "../../context/ThemeContext"
+import { SingleDateProps } from "../../types/SingleDateComponentType"
 
 const SingleDate = ({datum, praznik, post, crveno_slovo, key}: SingleDateProps) => {
 

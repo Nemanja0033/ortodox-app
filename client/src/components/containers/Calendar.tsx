@@ -1,10 +1,10 @@
 import axios from "axios";
 import { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router"
-import SingleDate from "./SingleDate";
-import { DataType } from "../types/DataType";
-import { useTheme } from "../context/ThemeContext";
-import { useLanguage } from "../context/LanguageContext";
+import SingleDate from "../views/SingleDateView";
+import { DataType } from "../../types/DataType";
+import { useTheme } from "../../context/ThemeContext";
+import { useLanguage } from "../../context/LanguageContext";
 import { RefreshCcw } from "lucide-react";
 
 const Calendar = () => {

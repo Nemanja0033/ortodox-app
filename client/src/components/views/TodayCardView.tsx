@@ -1,5 +1,5 @@
-import { useTheme } from "../context/ThemeContext"
-import { TodayCardComponnetType } from "../types/TodayCardComponentType"
+import { useTheme } from "../../context/ThemeContext"
+import { TodayCardComponnetType } from "../../types/TodayCardComponentType"
 
 
 const TodayCard = ({praznik, post, crveno_slovo, slika, dan}: TodayCardComponnetType) => {

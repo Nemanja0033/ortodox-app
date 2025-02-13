@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { useTheme } from "../context/ThemeContext";
+import { useTheme } from "../../context/ThemeContext";
 import axios from "axios";
-import FastsView from "./FastsView";
+import FastsView from "../views/FastsView";
 
 const FastsLayout = () => {
     const { theme } = useTheme();

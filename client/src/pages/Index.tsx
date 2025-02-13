@@ -1,4 +1,4 @@
-import Hero from "../components/HeroLayout"
+import Hero from "../components/containers/HeroLayout"
 
 
 const HomePage = () => {

@@ -1,12 +1,12 @@
 import axios from "axios";
 import { useState, useEffect, useRef } from "react";
-import TodayCard from "./TodayCard";
+import TodayCard from "../views/TodayCardView";
 import HeroCalendar from "./HeroCalendar";
-import { useLanguage } from "../context/LanguageContext";
-import { currentDate } from "../constants/currentDate";
-import { useTheme } from "../context/ThemeContext";
-import { useAnim } from "../hooks/useAnim";
-import Quote from "./Quote";
+import { useLanguage } from "../../context/LanguageContext";
+import { currentDate } from "../../constants/currentDate";
+import { useTheme } from "../../context/ThemeContext";
+import { useAnim } from "../../hooks/useAnim";
+import Quote from "../views/QuoteView";
 
 const Hero = () => {
   const [data, setData] = useState<any[]| null>(null);

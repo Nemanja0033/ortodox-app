@@ -1,4 +1,4 @@
-import FastsLayout from "../components/FastsLayout"
+import FastsLayout from "../components/containers/FastsLayout"
 
 const PostPage = () => {
   return (

@@ -1,4 +1,4 @@
-import { DataType } from "../types/DataType"
+import { DataType } from "../../types/DataType"
 
 const Card = ({datum, crveno_slovo, praznik, post}: DataType) => {
   return (
