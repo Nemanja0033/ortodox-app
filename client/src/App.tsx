@@ -3,7 +3,7 @@ import HomePage from "./pages/Index";
 import { BrowserRouter as Router, Route, Routes } from "react-router";
 import PostPage from "./pages/Fasts";
 import AboutPage from "./pages/About";
-import Navbar from "./components/Navigation";
+import Navbar from "./components/navigation/Navigation";
 const App = () => {
 
   return (
