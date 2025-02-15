@@ -1,9 +1,9 @@
 import { Calendar, Languages, Menu, SunMoon, X } from "lucide-react";
 import { useState } from "react"
-import { months } from "../utils/moths";
+import { months } from "../../utils/moths";
 import { Link } from "react-router";
-import { useLanguage } from "../context/LanguageContext";
-import { useTheme } from "../context/ThemeContext";
+import { useLanguage } from "../../context/LanguageContext";
+import { useTheme } from "../../context/ThemeContext";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
