@@ -21,7 +21,7 @@ const FastsLayout = () => {
         <p className="text-xl mt-5 p-3">``{data?.uvod[0].tekst} ,,</p>
       </section>
 
-      <section className="grid grid-cols-1 place-items-center">
+      <section className="grid grid-cols-1 mb-5 place-items-center">
         {data?.postovi.map((p: any, i: any) => (
           <FastsView key={i} post={p.post} />
         ))}

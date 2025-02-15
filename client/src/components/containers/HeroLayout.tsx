@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState, useEffect, useRef } from "react";
 import TodayCard from "../views/TodayCardView";
-import HeroCalendar from "./HeroCalendar";
+import HeroCalendar from "./HeroCalendarLayout";
 import { useLanguage } from "../../context/LanguageContext";
 import { currentDate } from "../../constants/currentDate";
 import { useTheme } from "../../context/ThemeContext";
@@ -49,8 +49,8 @@ const Hero = () => {
   }
 
   return (
-    <main ref={heroSectionRef} className="md:flex gap-5 flex-row justify-center items-center">
-      <section className="mt-12 md:ml-10 md:w-1/2">
+    <main ref={heroSectionRef} className="md:flex h-screen gap-5 flex-row justify-center items-center">
+      <section className="md:mt-0 mt-12 md:ml-10 md:w-1/2">
         <h1 className={`text-2xl md:text-start text-center font-bold ${theme === 'light' ? 'text-black' : 'text-white'}`}>{language === 'СР' ? 'Данас је' : 'Danas je'} {dayOfMonth}. {currentMonthName}</h1>
               {data?.map((d,index) => (
                 <TodayCard key={index}

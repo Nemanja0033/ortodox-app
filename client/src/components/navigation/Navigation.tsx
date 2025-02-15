@@ -19,9 +19,9 @@ const Navbar = () => {
                         <X size={30} />
                     </button>
     
-                    <b className="text-3xl flex items-center justify-center">
-                        {language === 'СР' ? 'Православни Календар' : 'Pravoslavni Kalendar'} ☦️
-                    </b>
+                    <i className="text-3xl flex items-center justify-center">
+                        {language === 'СР' ? 'Православник' : 'Pravoslavnik'} ☦️
+                    </i>
     
                     <Link className="flex items-center justify-center gap-1 hover:text-amber-500" 
                         to={''} 
@@ -57,7 +57,9 @@ const Navbar = () => {
     <div className="flex justify-center items-center">
     <nav className={`md:w-[80%] w-[90%] rounded-full h-[70px] mt-5 ${theme === 'light' ? 'bg-amber-100/40 hover:bg-amber-100' : 'bg-black text-white'} backdrop-blur-sms transition-all items-center flex justify-between`}>
         <div className="flex justify-center md:ml-20 ml-5">
-            <b className="text-xl flex items-center">{language === 'СР' ? 'Православни Календар' : 'Pravoslavni Kalendar'} ☦️</b>
+            <Link to={'/'}>
+                <i className="text-xl flex items-center font-bold">{language === 'СР' ? 'Православник' : 'Pravoslavnik'} ☦️</i>
+            </Link>
         </div>
         <div className="md:flex hidden justify-around gap-4 items-center mr-20">
             <div
