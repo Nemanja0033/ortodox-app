@@ -1,0 +1,1 @@
+export const LINKEDIN_URL = "https://www.linkedin.com/in/nemanja-antonijevic-6baabb2a2/";
