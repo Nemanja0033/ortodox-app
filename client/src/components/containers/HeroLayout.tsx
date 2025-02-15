@@ -49,12 +49,11 @@ const Hero = () => {
   }
 
   return (
-    <section ref={heroSectionRef} className="md:flex gap-5 flex-row justify-center">
-      <div className="mt-12 md:ml-10 md:w-1/2">
+    <main ref={heroSectionRef} className="md:flex gap-5 flex-row justify-center items-center">
+      <section className="mt-12 md:ml-10 md:w-1/2">
         <h1 className={`text-2xl md:text-start text-center font-bold ${theme === 'light' ? 'text-black' : 'text-white'}`}>{language === 'СР' ? 'Данас је' : 'Danas je'} {dayOfMonth}. {currentMonthName}</h1>
               {data?.map((d,index) => (
                 <TodayCard key={index}
-                          slika={d.slika}
                           praznik={d.praznik} 
                           post={d.post} 
                           crveno_slovo={d.crveno_slovo} 
@@ -67,13 +66,13 @@ const Hero = () => {
                   quote={language === 'SR' ? currentQuote?.text_lat : currentQuote?.text_cyr} 
                   onclick={refreshQuote}
                   />
-      </div>
+      </section>
 
-      <div className="flex-row mt-12 md:mr-5 justify-center md:w-1/2">
+      <section className="flex-row mt-12 md:mr-5 mb-5 justify-center md:w-1/2">
         <h1 className={`${theme === 'light' ? 'text-black' : 'text-white'} font-bold md:text-start text-center text-2xl mb-3`}>{language === 'СР' ? 'Календар ѕа месец дана' : 'Kalendar za mesec dana' }</h1>
         <HeroCalendar/>
-      </div>
-    </section>
+      </section>
+    </main>
   )
 }
 

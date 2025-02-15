@@ -1,4 +1,4 @@
-import Calendar from "../components/containers/Calendar"
+import Calendar from "../components/containers/CalendarLayout"
 
 const CalendarPage = () => {
   return (

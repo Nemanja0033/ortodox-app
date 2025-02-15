@@ -46,7 +46,7 @@ const Calendar = () => {
     }
 
   return (
-    <main className="mt-12 w-full">
+    <main className="mt-12 w-full h-screen">
         <nav className={` m-3 h-12 items-center rounded-xl flex text-center justify-around ${theme === 'light' ? 'bg-amber-100/60' : 'bg-black text-white'}`}>
             <span className="font-semibold text-xl">{month} ({calndarData.length})</span>
             <div className="flex items-center gap-2">
