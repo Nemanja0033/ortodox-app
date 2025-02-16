@@ -52,11 +52,11 @@ const HeroCalendar = () => {
   }
   
   return (
-    <div className={`flex-row w-full h-auto rounded-3xl ${theme === 'light' ? ' bg-amber-100/40' : 'bg-black/40'}`}>
-        <nav className={`w-full h-12 items-center ${theme === 'light' ? 'bg-amber-100' : 'bg-black text-white'} rounded-full shadow-md flex justify-between mb-2`}>
+    <div className={`flex-row w-full h-auto rounded-sm p-2 ${theme === 'light' ? ' bg-amber-100/40' : 'bg-black/40'}`}>
+        <nav className={`w-full h-12 items-center ${theme === 'light' ? 'bg-amber-100' : 'bg-black text-white'} rounded-sm shadow-md flex justify-between mb-2`}>
             <span className="font-bold text-xl ml-10">{month}</span>
             <div className="flex md:gap-2 gap-1 mr-10 items-center">
-              <select className={`${theme === 'light' ? 'bg-transparent border border-black' : 'bg-black border-amber-300 border'} rounded-md text-center`} onChange={(e) => handleFilter(e.target.value)} name="dropdown">
+              <select className={`${theme === 'light' ? 'bg-transparent border border-black' : 'bg-black border-grey-300 border'} p-1 text-center`} onChange={(e) => handleFilter(e.target.value)} name="dropdown">
                 <option>{language === 'SR' ? 'Crveno Slovo/Praznik' : 'Црвено Слово/Празник'}</option>
                 <option>{language === 'SR' ? 'Dani Posta' : 'Дани Поста'}</option>
                 <option>{language === 'SR' ? 'Nedelja' : 'Недеља'}</option>
@@ -65,7 +65,7 @@ const HeroCalendar = () => {
             </div>
         </nav>
 
-        <div className="flex-row w-full overflow-auto md:h-96 h-screen mt-3 bg-transparent rounded-xl">
+        <div className="flex-row w-full overflow-auto md:h-96 h-screen mt-3 bg-transparent rounded-sm">
           {calendarData?.map((d: DataType, index: number) => (
             <CalendarDataView praznik={d.praznik} datum={d.datum} crveno_slovo={d.crveno_slovo} index={index} post={d.post} dan={d.dan} />
           ))}

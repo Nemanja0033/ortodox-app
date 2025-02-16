@@ -55,7 +55,7 @@ const Navbar = () => {
 
   return (
     <div className="flex justify-center items-center">
-    <nav className={`md:w-[80%] w-[90%] rounded-full h-[70px] mt-5 ${theme === 'light' ? 'bg-amber-100/40 hover:bg-amber-100' : 'bg-black text-white'} backdrop-blur-sms transition-all items-center flex justify-between`}>
+    <nav className={`md:w-[80%] w-full rounded-sm h-[70px] mt-5 ${theme === 'light' ? 'bg-amber-100/40 hover:bg-amber-100' : 'bg-black text-white'} backdrop-blur-sms transition-all items-center flex justify-between`}>
         <div className="flex justify-center md:ml-20 ml-5">
             <Link to={'/'}>
                 <i className="text-xl flex items-center font-bold">{language === 'СР' ? 'Православник' : 'Pravoslavnik'} ☦️</i>

@@ -49,7 +49,7 @@ const Hero = () => {
   }
 
   return (
-    <main ref={heroSectionRef} className="md:flex h-screen gap-5 flex-row justify-center items-center">
+    <main ref={heroSectionRef} className="md:flex md:h-screen h-full gap-5 flex-row justify-center items-center">
       <section className="md:mt-0 mt-12 md:ml-10 md:w-1/2">
         <h1 className={`text-2xl md:text-start text-center font-bold ${theme === 'light' ? 'text-black' : 'text-white'}`}>{language === 'СР' ? 'Данас је' : 'Danas je'} {dayOfMonth}. {currentMonthName}</h1>
               {data?.map((d,index) => (
