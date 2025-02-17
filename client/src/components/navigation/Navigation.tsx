@@ -8,14 +8,31 @@ import { useTheme } from "../../context/ThemeContext";
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isOpenMonths, setIsOpenMonths] = useState(false);
+    const [openMonthsSm, setOpenMonthsSm] = useState(false);
     const {language, toggleLanguage} = useLanguage();
     const {theme, toggleTheme} = useTheme();
+
+    const closeNavs = () => {
+        setIsOpen(false);
+        setOpenMonthsSm(false);
+    }
+
+    if(openMonthsSm){
+        return(
+        <div className={`w-full absolute top-0 z-50 ${theme === 'light' ? 'bg-amber-100' : 'bg-black text-white'} h-screen grid grid-cols-1 place-items-center justify-around`}>
+            {months.map((m, index) => (
+            <Link onClick={closeNavs} key={index} to={`/kalendar/${m}`} className="block px-4 py-2 hover:bg-amber-200 rounded">
+                {m} 2025
+            </Link>
+            ))}
+        </div>
+        )
+    }
     
     if (isOpen) {
         return (
-            <div className={`w-full z-50 absolute top-0 left-0 h-screen flex justify-center items-center text-2xl ${theme === 'light' ? 'bg-amber-100' : 'bg-black text-white'}`}>
-                <div className="flex flex-col gap-4 text-center">
-                    <button className="self-end p-2 cursor-pointer" onClick={() => setIsOpen(false)}>
+            <div className={`w-full z-40  top-0 left-0 h-screen grid grid-cols-1 place-items-center justify-around text-2xl ${theme === 'light' ? 'bg-amber-100' : 'bg-black text-white'}`}>
+                 <button className="place-self-end mr-3 p-2 cursor-pointer" onClick={() => setIsOpen(false)}>
                         <X size={30} />
                     </button>
     
@@ -23,13 +40,10 @@ const Navbar = () => {
                         {language === 'СР' ? 'Православник' : 'Pravoslavnik'} ☦️
                     </i>
     
-                    <Link className="flex items-center justify-center gap-1 hover:text-amber-500" 
-                        to={''} 
-                        onClick={() => setIsOpenMonths(!isOpenMonths)}
-                    >
+                    <button className="flex items-center justify-center gap-1 hover:text-amber-500"  onClick={() => setOpenMonthsSm(true)}>
                         {language === 'СР' ? 'Календар за целу годину' : 'Kalendar za celu godinu'} 
                         <Calendar size={20} />
-                    </Link>
+                    </button>
     
                     <Link className="hover:text-amber-500" to={'/post'}>
                         {language === 'СР' ? 'Постови' : 'Postovi'}
@@ -47,7 +61,6 @@ const Navbar = () => {
                             <SunMoon size={20} />
                         </button>
                     </div>
-                </div>
             </div>
         );
     }
