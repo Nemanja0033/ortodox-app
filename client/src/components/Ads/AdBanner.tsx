@@ -17,12 +17,12 @@ const AdBanner = () => {
     <>
     {isOpen ? (
         <section className={`w-full ad-container flex ${theme === 'light' ? 'bg-white' : 'bg-black text-white'} justify-center items-center`}>
-        <div className="m-3">
-            <Link to={'https://buymeacoffee.com/nemanja0033'}>
+        <Link className="flex gap-2 items-center" to={'https://buymeacoffee.com/nemanja0033'}>
+            <div className="m-3">
                 <img className="h-12" src="/donations.png" alt="" />
-            </Link>
-        </div>
-        <h1 className="font-bold">{language === 'SR' ? "Podrzite rad stranice simbolicnom donacijom" : "Подржите рад странице симболичном донацијом"}</h1>
+            </div>
+            <h1 className="font-bold">{language === 'SR' ? "Podrzite rad stranice simbolicnom donacijom" : "Подржите рад странице симболичном донацијом"}</h1>
+        </Link>
         <button onClick={hideAd} className="relative cursor-pointer bottom-5 left-3"><X /></button>
        </section>
     )

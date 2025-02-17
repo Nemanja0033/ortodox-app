@@ -36,9 +36,7 @@ const Navbar = () => {
                         <X size={30} />
                     </button>
     
-                    <i className="text-3xl flex items-center justify-center">
-                        {language === 'СР' ? 'Православник' : 'Pravoslavnik'} ☦️
-                    </i>
+                    <img className="scale-50" src="./logo.png" alt="" />
     
                     <button className="flex items-center justify-center gap-1 hover:text-amber-500"  onClick={() => setOpenMonthsSm(true)}>
                         {language === 'СР' ? 'Календар за целу годину' : 'Kalendar za celu godinu'} 
@@ -71,7 +69,7 @@ const Navbar = () => {
     <nav className={`md:w-[95%] w-full rounded-sm h-[70px] md:mt-5 mt-0 ${theme === 'light' ? 'bg-amber-100/40 hover:bg-amber-100' : 'bg-black text-white'} backdrop-blur-sms transition-all items-center flex justify-between`}>
         <div className="flex justify-center md:ml-20 ml-5">
             <Link to={'/'}>
-                <i className="text-xl flex items-center font-bold">{language === 'СР' ? 'Православник' : 'Pravoslavnik'} ☦️</i>
+                <img className="scale-50" src="./logo.png" alt="" />
             </Link>
         </div>
         <div className="md:flex hidden justify-around gap-4 items-center mr-20">
