@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://pravoslavnik.vercel.app/sitemap.xml
