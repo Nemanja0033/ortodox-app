@@ -5,10 +5,12 @@ import PostPage from "./pages/Fasts";
 import AboutPage from "./pages/About";
 import Navbar from "./components/navigation/Navigation";
 import Footer from "./components/navigation/Footer";
+import AdBanner from "./components/Ads/AdBanner";
 const App = () => {
 
   return (
     <Router>
+      <AdBanner />
       <Navbar />
       <Routes>
         <Route path="/" element={ <HomePage />} />
