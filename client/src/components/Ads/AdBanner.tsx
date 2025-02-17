@@ -23,7 +23,7 @@ const AdBanner = () => {
             </div>
             <h1 className="font-bold">{language === 'SR' ? "Podrzite rad stranice simbolicnom donacijom" : "Подржите рад странице симболичном донацијом"}</h1>
         </Link>
-        <button onClick={hideAd} className="relative cursor-pointer bottom-5 left-3"><X /></button>
+        <button onClick={hideAd} className="relative cursor-pointer bottom-4 md:left-3 right-3"><X /></button>
        </section>
     )
     :

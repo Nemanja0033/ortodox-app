@@ -56,7 +56,7 @@ const HeroCalendar = () => {
         <nav className={`w-full h-12 items-center ${theme === 'light' ? 'bg-amber-100' : 'bg-black text-white'} rounded-sm shadow-md flex justify-between mb-2`}>
             <span className="font-bold text-xl ml-10">{month}</span>
             <div className="flex md:gap-2 gap-1 mr-10 items-center">
-              <select className={`${theme === 'light' ? 'bg-transparent border border-black' : 'bg-black border-grey-300 border'} p-1 text-center`} onChange={(e) => handleFilter(e.target.value)} name="dropdown">
+              <select className={`${theme === 'light' ? 'bg-transparent border border-black' : 'bg-black border-grey-300 border'} md:w-auto w-20 p-1 text-center`} onChange={(e) => handleFilter(e.target.value)} name="dropdown">
                 <option>{language === 'SR' ? 'Crveno Slovo/Praznik' : 'Црвено Слово/Празник'}</option>
                 <option>{language === 'SR' ? 'Dani Posta' : 'Дани Поста'}</option>
                 <option>{language === 'SR' ? 'Nedelja' : 'Недеља'}</option>

@@ -31,7 +31,7 @@ const Navbar = () => {
     
     if (isOpen) {
         return (
-            <div className={`w-full z-40  top-0 left-0 h-screen grid grid-cols-1 place-items-center justify-around text-2xl ${theme === 'light' ? 'bg-amber-100' : 'bg-black text-white'}`}>
+            <div className={`w-full z-40  top-0 left-0 h-screen grid grid-cols-1 place-items-center justify-around text-2xl ${theme === 'light' ? 'bg-amber-100' : 'bg-black text-amber-300'}`}>
                  <button className="place-self-end mr-3 p-2 cursor-pointer" onClick={() => setIsOpen(false)}>
                         <X size={30} />
                     </button>
@@ -66,8 +66,8 @@ const Navbar = () => {
 
   return (
     <div className="flex justify-center items-center">
-    <nav className={`md:w-[95%] w-full rounded-sm h-[70px] md:mt-5 mt-0 ${theme === 'light' ? 'bg-amber-100/40 hover:bg-amber-100' : 'bg-black text-white'} backdrop-blur-sms transition-all items-center flex justify-between`}>
-        <div className="flex justify-center md:ml-20 ml-5">
+    <nav className={`md:w-[95%] w-full rounded-sm h-[70px] md:mt-5 mt-0 ${theme === 'light' ? 'md:bg-amber-100/40 bg-amber-100 hover:bg-amber-100' : 'bg-black text-amber-300'} backdrop-blur-sms transition-all items-center flex justify-between`}>
+        <div className="flex justify-center md:ml-20">
             <Link to={'/'}>
                 <img className="scale-50" src="./logo.png" alt="" />
             </Link>

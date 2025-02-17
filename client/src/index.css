@@ -2,7 +2,8 @@
 
 body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background-image: url('assets/bg.jpg');
+    background-image: url('assets/bg2.jpg');
+    background-position: right;
     height: 100vh;
     margin: 0;
 }

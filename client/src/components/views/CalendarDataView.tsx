@@ -18,7 +18,7 @@ const CalendarDataView = ({index, datum, post, dan, crveno_slovo, praznik}: Data
       };
 
   return (
-    <div key={index} className={`flex justify-between md:h-22 h-18 ${savedDate === datum ? 'bg-red-400' : ''}  ${datum === currentDate ? 'bg-amber-200' : ''} ${theme === 'light' ? 'bg-amber-100/40 hover:bg-amber-100' : 'bg-black/70 hover:bg-black text-white'} transition-all cursor-pointer mt-1 shadow-md rounded-md items-center w-full`}>
+    <div key={index} className={`flex justify-between h-auto ${savedDate === datum ? 'bg-red-400' : ''}  ${datum === currentDate ? 'bg-amber-200' : ''} ${theme === 'light' ? 'bg-amber-100/40 hover:bg-amber-100' : 'bg-black/70 hover:bg-black text-white'} transition-all cursor-pointer mt-1 shadow-md rounded-md items-center w-full`}>
         <div className="flex-row ml-5">
             <span className="md:text-xl text-md">{datum.replace('2025-', '')}</span>
             <br />
