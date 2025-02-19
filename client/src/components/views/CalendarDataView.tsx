@@ -1,4 +1,4 @@
-import { CalendarHeart } from "lucide-react";
+import { Pin } from "lucide-react";
 import { useState, useEffect } from "react";
 import { currentDate } from "../../constants/currentDate";
 import { DataViewType } from "../../types/DateViewType";
@@ -28,7 +28,7 @@ const CalendarDataView = ({index, datum, post, dan, crveno_slovo, praznik}: Data
         </div>
         <div className="flex gap-2 items-center mr-3">
             <h1 className={`${crveno_slovo === 'Да' ? 'text-red-500' : ''} md:text-xl font-bold mr-3 text-end`}>{praznik}</h1>
-            <button onClick={() => saveDate(datum)} className="cursor-pointer hover:text-amber-300"><CalendarHeart size={22} /></button>
+            <button onClick={() => saveDate(datum)} className="cursor-pointer hover:text-amber-300"><Pin size={22} /></button>
         </div>
     </div>
   )

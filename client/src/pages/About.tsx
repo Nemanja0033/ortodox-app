@@ -1,7 +1,10 @@
+import AboutLayout from "../components/containers/AboutLayout"
 
 const AboutPage = () => {
   return (
-    <div>AboutPage</div>
+    <div>
+      <AboutLayout />
+    </div>
   )
 }
 
